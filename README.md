@@ -11,8 +11,10 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 -   [ ] [Testimonial Cards][demo-testimonial-cards] [[ref][ref-testimonial-cards]] - COMMING SOON 🚩
 
 [Frontend Projects]: https://github.com/Pine1611/frontend-projects/blob/main/README.md
+[ref-frontend]: https://roadmap.sh/frontend/projects
+[full-demo]: https://pine1611.github.io/frontend-projects
 [ref-single-page-cv]: https://roadmap.sh/projects/single-page-cv
-[ref-full-demo]: https://pine1611.github.io/frontend-projects
+[ref-single-page-cv]: https://roadmap.sh/projects/single-page-cv
 [demo-single-page-cv]: https://pine1611.github.io/frontend-projects/01-single-page-cv/public
 [ref-basic-html-website]: https://roadmap.sh/projects/basic-html-website
 [demo-basic-html-website]: https://pine1611.github.io/frontend-projects/02-basic-html-website/public
