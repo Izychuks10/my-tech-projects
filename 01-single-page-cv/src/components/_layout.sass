@@ -1,0 +1,42 @@
+@include b("wrapper")
+    max-width: calculateRem(960px)
+    width: 100%
+    margin: calculateRem(60px) auto
+    padding: calculateRem(32px)
+    @include for_screen("mobile-md", "max-w")
+        padding-left: calculateRem(20px)
+        padding-right: calculateRem(20px)
+@include b("box")
+    padding: #{$space_sm}
+    background: #{$primary_50}
+    border: 1px solid #{$primary_100}
+    border-radius: #{$radius_xl}
+    position: relative
+    overflow: hidden
+    color: #{$heavy_grey}
+    @include m("with-title")
+        padding-top: calculateRem(68px)
+    @include e("content")
+        font-size: calculateRem(14px)
+    @include e("title")
+        position: absolute
+        left: 0
+        top: 0
+        font-family: "Nunito Sans", sans-serif
+        font-size: #{$fontsize_xl}
+        line-height: calculateRem(32px)
+        text-transform: uppercase
+        color: #{$primary_100}
+        margin-bottom: calculateRem(32px)
+        padding: calculateRem(12px) calculateRem(32px)
+        background: #{$primary_400}
+        border-top-left-radius: calculaterem(32px)
+        border-bottom-right-radius: calculateRem(32px)
+
+@include b("text")
+    @include e("left")
+        text-align: left
+    @include e("right")
+        text-align: right
+    @include e("center")
+        text-align: center
