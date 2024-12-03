@@ -1,0 +1,56 @@
+@include b("wrapper")
+    --space-sm: #{$space_sm}
+    --space-lg: #{$space_lg}
+    --space-xl: #{$space_xl}
+    --padding-all-wrapper: #{calculateRem(32px)}
+    --padding-all-box: #{calculateRem(24px)}
+    --border-radius-box: #{calculateRem(32px)}
+    --background-color-box: #{$primary_50}
+    --border-color-box: #{$primary_50}
+    --fontsize-content: #{$fontsize_md}
+    --fontsize-title: #{$fontsize_xl}
+    --text-color: #{$heavy_grey}
+
+    max-width: calculateRem(1100px)
+    width: 100%
+    margin: calculateRem(60px) auto
+    padding: var(--space-xl)
+    @include for_screen("mobile-md", "max-w")
+        padding-left: calculateRem(20px)
+        padding-right: calculateRem(20px)
+
+@include b("box")
+    background: var(--background-color-box)
+    border: 1px solid var(--border-color-box)
+    border-radius: var(--space-xl)
+    padding: var(--padding-all-box)
+    position: relative
+    overflow: hidden
+    color: var(--text-color)
+    font-size: var(--fontsize-box)
+    @include m("with-title")
+        padding-top: calculateRem(68px)
+    @include e("title")
+        position: absolute
+        left: 0
+        top: 0
+        font-family: "Nunito Sans", sans-serif
+        font-size: var(--fontsize-title)
+        line-height: var(--space-xl)
+        text-transform: uppercase
+        color: #{$primary_100}
+        margin-bottom: var(--space-xl)
+        padding: var(--space-sm) var(--space-xl)
+        background: #{$primary_400}
+        border-top-left-radius: var(--space-xl)
+        border-bottom-right-radius: var(--space-xl)
+    @include e("head")
+        justify-content: space-between
+
+@include b("text")
+    @include e("left")
+        text-align: left
+    @include e("right")
+        text-align: right
+    @include e("center")
+        text-align: center
