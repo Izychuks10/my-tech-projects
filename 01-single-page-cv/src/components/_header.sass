@@ -1,0 +1,36 @@
+@include b("header")
+    --title-color: #{$primary_400}
+    --sub-title-color: #{$heavy_grey}
+    --space-xs: #{$space_xs}
+    --space-sm: #{$space_sm}
+    --fontsize-sm: #{$fontsize_sm}
+
+    @include e("logo")
+        img
+            max-width: calculateRem(120px)
+            width: 100%
+            object-fit: cover
+            display: block
+
+    @include e("hello")
+        font-size: calculateRem(32px)
+        line-height: calculateRem(38px)
+        font-weight: 800
+        color: var(--title-color)
+        margin-bottom: var(--space-sm)
+        > span
+            font-family: "Nunito Sans", sans-serif
+            font-size: var(--fontsize-sm)
+            line-height: calculateRem(20px)
+            font-style: italic
+            font-weight: 600
+            color: var(--sub-title-color)
+            > i
+                font-style: normal
+    @include e("tags")
+        font-family: "Nunito Sans", sans-serif
+        font-size: var(--fontsize-sm)
+        font-weight: 800
+        text-transform: uppercase
+        text-align: center
+        color: #{$primary_400}
