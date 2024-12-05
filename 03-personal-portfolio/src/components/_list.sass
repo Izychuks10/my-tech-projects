@@ -1,0 +1,46 @@
+@include b("tree")
+    $tree_branch: null
+
+    --branch-text-color: #{$heavy_grey}
+    --tree-sign-color: #{$mid_grey}
+    --fz-branch: #{$fontsize_md}
+    --lh-branch: #{calculateRem(22px)}
+    --status-ico-size: #{calculateRem(20px)}
+
+    @include e("title")
+        color: var(--global-title-special-color)
+        font-size: var(--global-fz-title)
+        // font-weight: 500
+    @include e("branch")
+        $tree_branch: &
+
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        align-items: center
+        justify-content: space-between
+        position: relative
+        font-size: var(--fz-branch)
+        line-height: var(--lh-branch)
+        color: var(--branch-text-color)
+        padding-left: #{$space_md}
+        &::before
+            content: "├─"
+            height: 20px
+            position: absolute
+            left: 0
+            color: var(--tree-sign-color)
+    @include m("sm")
+        #{$tree_branch}
+            font-size: #{$fontsize_sm}
+    @include e("status")
+        gap: 2px
+        > span
+            display: flex
+            align-items: center
+            justify-content: center
+            width: var(--status-ico-size)
+            height: var(--status-ico-size)
+            font-size: calculateRem(14px)
+            a
+                display: block

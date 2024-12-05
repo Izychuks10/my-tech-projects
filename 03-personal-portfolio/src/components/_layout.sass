@@ -1,0 +1,47 @@
+@include b("wrapper")
+    --wrapper-pad: #{calculateRem(32px)}
+    --wrapper-mag: #{calculateRem(68px)}
+
+    width: 90%
+    max-width: calculateRem(1100px)
+    margin: var(--wrapper-mag) auto
+    padding: var(--wrapper-pad)
+    @include for_screen("mobile-md", "max-w")
+        padding-left: var(--global-pad-x-mobile)
+        padding-right: var(--global-pad-x-mobile)
+
+@include b("box")
+    --box-pad: #{$space_xl}
+    --bg-box-item: #{$white}
+    --border-color-box-item: #{$primary_100}
+    --mg-bottom-title: #{$space_md}
+
+    background: var(--global-box-background)
+    border-radius: var(--global-radius)
+    padding: var(--box-pad)
+    position: relative
+    overflow: hidden
+    @include m("item")
+        background: var(--bg-box-item)
+        border: 1px solid var(--border-color-box-item)
+    @include e("title")
+        font-size: var(--global-fz-title)
+        line-height: var(--global-lh-title)
+        color: var(--global-title-special-color)
+        margin-bottom: var(--mg-bottom-title)
+
+    @include e("head")
+        justify-content: space-between
+        margin-bottom: 8px
+        h5
+            font-size: #{$fontsize_md}
+            color: #{$primary_400}
+        label
+            font-size: #{$fontsize_sm}
+            color: #{$mid_grey}
+    @include e("main")
+        p
+            font-size: #{$fontsize_df}
+            // margin-bottom: 12px
+        a
+            font-size: #{$fontsize_sm}

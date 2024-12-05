@@ -1,0 +1,14 @@
+@include b("hero")
+    --fz-hero-title: #{$fontsize_xl}
+    --lh-hero-title: #{calculateRem(38px)}
+    --fz-hero-sub-title: #{$fontsize_md}
+    --lh-hero-sub-title: #{calculateRem(38px)}
+
+    @include e("title")
+        font-size: var(--fz-hero-title)
+        line-height: var(--lh-hero-title)
+        color: var(--global-title-special-color)
+    @include e("sub-title")
+        font-size: var(--fz-hero-sub-title)
+        line-height: var(--lh-hero-sub-title)
+        font-weight: 400

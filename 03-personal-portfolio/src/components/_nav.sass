@@ -1,0 +1,25 @@
+@include b("nav")
+    --nav-item-hover-bg: #{$light_grey}
+    --nav-item-active-bg: #{$light_grey}
+    --nav-item-active-color: #{$primary_400}
+    --nav-pad: #{calculateRem(10px)} #{calculateRem(20px)}
+    --nav-fz: #{calculatRem(18px)}
+    --nav-lh: #{calculatRem(24px)}
+    --nav-radius: #{$space_sm}
+
+    @include e("item")
+        display: block
+        padding: var(--nav-pad)
+        margin-left: #{$space_xs}
+        color: var(--global-link-color)
+        font-size: var(--nav-fz)
+        line-height: var(--nav-lh)
+        border-radius: var(--nav-radius)
+        &:hover
+            color: var(--global-link-hover)
+            background: var(--nav-item-hover-bg)
+        &:first-child
+            margin-left: 0
+        &.active
+            color: var(--nav-item-active-color)
+            background: var(--nav-item-active-bg)
