@@ -1,0 +1,29 @@
+html, body
+    background: var(--global-background)
+    color: var(--global-text-color)
+
+a
+    // --fontsize-link: #{$fontsize_md}
+    // --lineheight-link: #{calculateRem(20px)}
+
+    color: var(--global-link-color)
+    // font-size: var(--fontsize-link)
+    // line-height: var(--lineheight-link)
+    transition: all 180ms ease-in-out
+    &:hover
+        color: var(--global-link-hover)
+
+@include b("text")
+    @include e("left")
+        text-align: left
+    @include e("right")
+        text-align: right
+    @include e("center")
+        text-align: center
+
+@include b("icon")
+    display: block
+    object-fit: cover
+    @include m("xs")
+        width: 16px
+        height: 16px
