@@ -1,0 +1,11 @@
+body
+    background: var(--global-bg)
+    color: var(--global-text-color)
+
+@include b("text")
+    @include e("center")
+        text-align: center
+    @include e("right")
+        text-align: right
+    @include e("left")
+        text-align: left
