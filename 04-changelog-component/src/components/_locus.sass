@@ -1,0 +1,23 @@
+@include b("locus")
+    --bg-spot-ground: #{$light_grey}
+    --bg-spot: #{$mid_grey}
+    --space-spot-ground: #{$space_24}
+    --space-spot: #{$space_16}
+
+    align-items: center
+    transform: translateX(#{calculateRem(13px)})
+
+    @include e("spot-ground")
+        width: var(--space-spot-ground)
+        height: var(--space-spot-ground)
+        background: var(--bg-spot-ground)
+        border-radius: 50%
+    @include e("spot")
+        width: var(--space-spot)
+        height: var(--space-spot)
+        background: var(--bg-spot)
+        border-radius: 50%
+
+    @include e("dots")
+        @include for-screen("mobile-md", "max-w")
+            display: none

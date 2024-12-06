@@ -1,0 +1,49 @@
+@include b("changelog")
+    $changelog_content: null
+
+    --gap-timeline: #{$space_24}
+    --separate-content: 38%
+    --pad-content: #{$space_32}
+    --bg-content: #{$light_grey}
+    --radius-content: #{$space_32}
+    --fz-date: #{calculateRem(15px)}
+    --fz-tags: #{calculateRem(14px)}
+
+    @include e("header")
+
+    @include e("main")
+        max-height: 60vh
+        overflow-y: auto
+        padding: #{$space_68} 0
+        position: relative
+
+    @include e("line")
+        width: 1px
+        height: 100%
+        background: var(--light-grey)
+        position: absolute
+        left: var(--separate-content)
+        transform: translateX(var(--separate-content))
+
+    @include e("timeline")
+        $changelog_content: &
+
+        display: grid
+        grid-template-columns: repeat(1, var(--separate-content) 1fr)
+        gap: var(--gap-timeline)
+
+    @include e("content")
+        padding: var(--pad-content)
+        background: var(--bg-content)
+        border-radius: var(--radius-content)
+        margin: 0 #{$space_20}
+        @include for-screen("mobile-md", "max-w")
+            margin: 0
+
+    @include e("date")
+        font-size: var(--fz-date)
+        font-weight: 600
+    @include e("tags")
+        font-size: var(--fz-tags)
+        @include for-screen("mobile-md", "max-w")
+            display: none
