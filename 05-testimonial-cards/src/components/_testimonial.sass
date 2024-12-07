@@ -1,0 +1,54 @@
+@include b("testimonial")
+    --bg-testimonial: #{$light_grey}
+
+@include b("slides")
+    --max-height-slide: #{calculateRem(120px)}
+    --width-container: #{calculateRem(800px)}
+    --width-thumb: #{calculateRem(80px)}
+    --height-thumb: #{calculateRem(120px)}
+    --width-thumb-active: #{calculateRem(240px)}
+    --height-thumb-active: #{calculateRem(360px)}
+
+    --fz-title: #{calculateRem(24px)}
+    --lh-title: #{calculateRem(32px)}
+    --text-color-title: #{$primary_400}
+
+    position: relative
+    width: var(--width-container)
+
+    @include e("item")
+        display: block
+        @include m("thumb")
+            width: var(--width-thumb)
+            height: var(--height-thumb)
+        @include m("active")
+            width: var(--width-thumb-active)
+            height: var(--height-thumb-active)
+        > img
+            display: block
+            width: 100%
+            object-fit: cover
+
+    @include e("content-wrap")
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+
+    @include e("title")
+        position: absolute
+        top: 0
+        left: 0
+        transform: rotateZ(-90deg) translateX(-50%)
+        font-size: var(--fz-title)
+        line-height: var(--lh-title)
+        color: var(--text-color-title)
+
+    @include e("content")
+        color: #{$heavy_grey}
+
+        label
+            font-size: calculateRem(12px)
+        h5
+            font-size: calculateRem(20px)
+            color: #{$black28}
