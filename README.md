@@ -4,11 +4,18 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 
 ## [Frontend Projects][Frontend Projects] [[ref][ref-frontend]] / [[full-demo][full-demo]]
 
+> 🌱 Beginner Projects
+
 -   [x] [Single Page CV][demo-single-page-cv] [[ref][ref-single-page-cv]] - DONE 🎉
 -   [x] [Basic HTML Website][demo-basic-html-website] [[ref][ref-basic-html-website]] - DONE 🎉
--   [ ] [Personal Portfolio][demo-personal-portfolio] [[ref][ref-personal-portfolio]] - ONGOING 🎪
--   [ ] [Changelog Component][demo-changelog-component] [[ref][ref-changelog-component]] - COMMING SOON 🚩
--   [ ] [Testimonial Cards][demo-testimonial-cards] [[ref][ref-testimonial-cards]] - COMMING SOON 🚩
+-   [x] [Personal Portfolio][demo-personal-portfolio] [[ref][ref-personal-portfolio]] - DONE 🎉
+-   [x] [Changelog Component][demo-changelog-component] [[ref][ref-changelog-component]] - DONE 🎉
+-   [x] [Testimonial Cards][demo-testimonial-cards] [[ref][ref-testimonial-cards]] - DONE 🎉
+-   [ ] [Datepicker UI][demo-datepicker-ui] [[ref][ref-datepicker-ui]] - ONGOING 🎪
+-   [ ] [Accessible Form UI][demo-accessible-form-ui] [[ref][ref-accessible-form-ui]] - COMMING SOON 🚩
+-   [ ] [Image Grid Layout][demo-image-grid] [[ref][ref-image-grid]] - COMMING SOON 🚩
+-   [ ] [Tooltip UI][demo-tooltip-ui] [[ref][ref-tooltip-ui]] - COMMING SOON 🚩
+-   [ ] [Simple Tabs][demo-simple-tabs] [[ref][ref-simple-tabs]] - COMMING SOON 🚩
 
 [Frontend Projects]: https://github.com/Pine1611/frontend-projects/blob/main/README.md
 [ref-frontend]: https://roadmap.sh/frontend/projects
@@ -24,3 +31,13 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [demo-changelog-component]: https://pine1611.github.io/frontend-projects/
 [ref-testimonial-cards]: https://roadmap.sh/projects/basic-html-website
 [demo-testimonial-cards]: https://pine1611.github.io/frontend-projects/
+[ref-datepicker-ui]: https://roadmap.sh/projects/datepicker-ui
+[demo-datepicker-ui]: https://pine1611.github.io/frontend-projects/
+[ref-accessible-form-ui]: https://roadmap.sh/projects/accessible-form-ui
+[demo-accessible-form-ui]: https://pine1611.github.io/frontend-projects/
+[ref-image-grid]: https://roadmap.sh/projects/image-grid
+[demo-image-grid]: https://pine1611.github.io/frontend-projects/
+[ref-tooltip-ui]: https://roadmap.sh/projects/tooltip-ui
+[demo-tooltip-ui]: https://pine1611.github.io/frontend-projects/
+[ref-simple-tabs]: https://roadmap.sh/projects/simple-tabs
+[demo-simple-tabs]: https://pine1611.github.io/frontend-projects/
