@@ -25,12 +25,12 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [demo-single-page-cv]: https://pine1611.github.io/frontend-projects/01-single-page-cv/public
 [ref-basic-html-website]: https://roadmap.sh/projects/basic-html-website
 [demo-basic-html-website]: https://pine1611.github.io/frontend-projects/02-basic-html-website/public
-[ref-personal-portfolio]: https://roadmap.sh/projects/personal-portfolio
-[demo-personal-portfolio]: https://pine1611.github.io/frontend-projects/
+[ref-personal-portfolio]: https://roadmap.sh/projects/portfolio-website
+[demo-personal-portfolio]: https://pine1611.github.io/frontend-projects/03-personal-portfolio/public
 [ref-changelog-component]: https://roadmap.sh/projects/changelog-component
-[demo-changelog-component]: https://pine1611.github.io/frontend-projects/
+[demo-changelog-component]: https://pine1611.github.io/frontend-projects/04-changelog-component/public
 [ref-testimonial-cards]: https://roadmap.sh/projects/basic-html-website
-[demo-testimonial-cards]: https://pine1611.github.io/frontend-projects/
+[demo-testimonial-cards]: https://pine1611.github.io/frontend-projects/05-testimonial-cards/public
 [ref-datepicker-ui]: https://roadmap.sh/projects/datepicker-ui
 [demo-datepicker-ui]: https://pine1611.github.io/frontend-projects/
 [ref-accessible-form-ui]: https://roadmap.sh/projects/accessible-form-ui
