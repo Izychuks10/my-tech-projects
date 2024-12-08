@@ -29,7 +29,7 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [demo-personal-portfolio]: https://pine1611.github.io/frontend-projects/03-personal-portfolio/public
 [ref-changelog-component]: https://roadmap.sh/projects/changelog-component
 [demo-changelog-component]: https://pine1611.github.io/frontend-projects/04-changelog-component/public
-[ref-testimonial-cards]: https://roadmap.sh/projects/basic-html-website
+[ref-testimonial-cards]: https://roadmap.sh/projects/testimonial-cards
 [demo-testimonial-cards]: https://pine1611.github.io/frontend-projects/05-testimonial-cards/public
 [ref-datepicker-ui]: https://roadmap.sh/projects/datepicker-ui
 [demo-datepicker-ui]: https://pine1611.github.io/frontend-projects/
