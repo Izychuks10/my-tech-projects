@@ -55,35 +55,25 @@
             </div>
         </header>
 
-        <section class="testimonial">
+        <section class="flex flex--center testimonial">
 
             <!-- begin slides container -->
-            <div class="flex flex--center slides slides__container">
+            <div class="flex flex--x-start flex--sm-y slides slides__container">
 
                 <!-- begin slides content / testimonial content -->
                 <div class="flex flex--x gap-5 slides__content-wrap">
-                    <div class="basis-6 relative">
+                    <div class="basis-sm-6 basis-12 relative">
                         <h3 class="slides__title">Testimonial</h3>
                     </div>
-                    <div class="basis-6 flex flex--y gap-3 slides__content">
-                        <label>#1</label>
-                        <h5>I am Pine</h5>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officiis nesciunt deserunt
-                            necessitatibus aspernatur illum!
-                        </p>
+                    <div class="basis-sm-6 basis-12 flex flex--y gap-3 slides__content" id="slides__content-js">
+                        <!-- dynamic content slide here -->
                     </div>
                 </div>
                 <!-- /end slides content -->
 
                 <!-- begin slides item -->
-                <div class="flex flex--x flex--y-end gap-5">
-                    <div class="slides__item slides__item--thumb"><img src="assets/images/slides/slide-1.jpg" /></div>
-                    <div class="slides__item slides__item--active"><img src="assets/images/slides/slide-2.jpg" /></div>
-                    <div class="slides__item slides__item--thumb"><img src="assets/images/slides/slide-3.jpg" /></div>
-                    <div class="slides__item slides__item--thumb"><img src="assets/images/slides/slide-4.jpg" /></div>
-                    <div class="slides__item slides__item--thumb"><img src="assets/images/slides/slide-5.jpg" /></div>
-                    <div class="slides__item slides__item--thumb"><img src="assets/images/slides/slide-6.jpg" /></div>
+                <div class="flex flex--x flex--y-end gap-5" id="slideThumbs-js">
+                    <!-- dynamic list slide thumb here -->
                 </div>
                 <!-- /end slides item -->
 
@@ -101,6 +91,8 @@
             <p>&copy; all rights reserved 2024</p>
         </footer>
     </div>
+
+    <script src="assets/js/scripts.js"></script>
 
 </body>
 
