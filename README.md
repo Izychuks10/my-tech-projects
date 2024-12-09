@@ -11,9 +11,9 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 -   [x] [Personal Portfolio][demo-personal-portfolio] [[ref][ref-personal-portfolio]] - DONE 🎉
 -   [x] [Changelog Component][demo-changelog-component] [[ref][ref-changelog-component]] - DONE 🎉
 -   [x] [Testimonial Cards][demo-testimonial-cards] [[ref][ref-testimonial-cards]] - DONE 🎉
--   [ ] [Datepicker UI][demo-datepicker-ui] [[ref][ref-datepicker-ui]] - ONGOING 🎪
--   [ ] [Accessible Form UI][demo-accessible-form-ui] [[ref][ref-accessible-form-ui]] - COMMING SOON 🚩
--   [ ] [Image Grid Layout][demo-image-grid] [[ref][ref-image-grid]] - COMMING SOON 🚩
+-   [x] [Datepicker UI][demo-datepicker-ui] [[ref][ref-datepicker-ui]] - DONE 🎉
+-   [ ] [Accessible Form UI][demo-accessible-form-ui] [[ref][ref-accessible-form-ui]] - ONGOING 🎪
+-   [x] [Image Grid Layout][demo-image-grid] [[ref][ref-image-grid]] - DONE 🎉
 -   [ ] [Tooltip UI][demo-tooltip-ui] [[ref][ref-tooltip-ui]] - COMMING SOON 🚩
 -   [ ] [Simple Tabs][demo-simple-tabs] [[ref][ref-simple-tabs]] - COMMING SOON 🚩
 
@@ -29,14 +29,14 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [demo-personal-portfolio]: https://pine1611.github.io/frontend-projects/03-personal-portfolio/public
 [ref-changelog-component]: https://roadmap.sh/projects/changelog-component
 [demo-changelog-component]: https://pine1611.github.io/frontend-projects/04-changelog-component/public
-[ref-testimonial-cards]: https://roadmap.sh/projects/basic-html-website
+[ref-testimonial-cards]: https://roadmap.sh/projects/testimonial-cards
 [demo-testimonial-cards]: https://pine1611.github.io/frontend-projects/05-testimonial-cards/public
 [ref-datepicker-ui]: https://roadmap.sh/projects/datepicker-ui
-[demo-datepicker-ui]: https://pine1611.github.io/frontend-projects/
+[demo-datepicker-ui]: https://pine1611.github.io/frontend-projects/06-datepicker-ui/public
 [ref-accessible-form-ui]: https://roadmap.sh/projects/accessible-form-ui
 [demo-accessible-form-ui]: https://pine1611.github.io/frontend-projects/
 [ref-image-grid]: https://roadmap.sh/projects/image-grid
-[demo-image-grid]: https://pine1611.github.io/frontend-projects/
+[demo-image-grid]: https://pine1611.github.io/frontend-projects/08-image-grid-layout/public
 [ref-tooltip-ui]: https://roadmap.sh/projects/tooltip-ui
 [demo-tooltip-ui]: https://pine1611.github.io/frontend-projects/
 [ref-simple-tabs]: https://roadmap.sh/projects/simple-tabs
