@@ -1,0 +1,24 @@
+body
+    background: var(--global-bg)
+    color: var(--global-text-color)
+    font-family: "Space Mono", monospace
+    font-size: 16px
+    font-weight: 400
+    font-style: normal
+
+@include b("text")
+    @include e("center")
+        text-align: center
+    @include e("right")
+        text-align: right
+    @include e("left")
+        text-align: left
+@include b("fz-sm")
+    font-size: calculateRem(14px)
+
+@include b("space-bet")
+    justify-content: space-between
+@include b("al-center")
+    align-items: center
+@include b("grow-1")
+    flex-grow: 1

@@ -1,0 +1,75 @@
+@include b("datepicker")
+
+    --datepicker-wrap-width: #{calculateRem(320px)}
+    --fz-calendar-title: #{calculateRem(12px)}
+    --fz-calendar-day: #{calculateRem(14px)}
+    --border-color-input: #{$primary_100}
+    --border-color-active: #{$primary_300}
+    --transition-all: 180ms all ease-in-out
+
+    @include e("wrap")
+        width: var(--datepicker-wrap-width)
+
+    @include e("calendar")
+        padding: #{$space_20}
+        border-radius: #{$space_20}
+        background: var(--light-grey)
+
+        @include b("calendar")
+            text-align: center
+            @include e("days-name")
+                label
+                    font-size: var(--fz-calendar-title)
+                    font-weight: 600
+                    color: var(--heavy-grey)
+            @include e("days")
+                label
+                    font-size: var(--fz-calendar-day)
+                    font-weight: 500
+                    color: var(--heavy-grey)
+                    padding: #{$space_4}
+                    border-radius: #{$space_4}
+                    border: 1px solid transparent
+                    cursor: pointer
+                    transition: var(--transition-all)
+                    &:hover
+                        background: var(--anti-flash)
+                        color: #{$primary_400}
+                        border-color: #{$primary_200}
+
+    @include e("month")
+        label
+            font-size: var(--fz-calendar-title)
+            font-weight: 600
+            color: #{$primary_400}
+
+    @include e("days-name")
+
+    @include e("input")
+        color: #{$primary_400}
+        padding: #{$space_8} #{$space_12}
+        background: var(--anti-flash)
+        border: 1px solid var(--border-color-input)
+        outline: none
+        border-radius: #{$space_8}
+        transition: var(--transition-all)
+        &:hover, &:focus
+            border-color: var(--border-color-active)
+
+    @include e("btn")
+        border: 1px solid var(--border-color-input)
+        background: var(--anti-flash)
+        outline: none
+        display: flex
+        align-items: center
+        justify-content: center
+        padding: #{$space_4}
+        border-radius: #{$space_8}
+        transition: var(--transition-all)
+        cursor: pointer
+        width: 32px
+        height: 32px
+        &:hover
+            border-color: var(--border-color-active)
+            svg
+                stroke: #{$primary_400}
