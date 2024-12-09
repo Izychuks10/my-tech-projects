@@ -13,7 +13,7 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 -   [x] [Testimonial Cards][demo-testimonial-cards] [[ref][ref-testimonial-cards]] - DONE 🎉
 -   [ ] [Datepicker UI][demo-datepicker-ui] [[ref][ref-datepicker-ui]] - ONGOING 🎪
 -   [ ] [Accessible Form UI][demo-accessible-form-ui] [[ref][ref-accessible-form-ui]] - COMMING SOON 🚩
--   [ ] [Image Grid Layout][demo-image-grid] [[ref][ref-image-grid]] - COMMING SOON 🚩
+-   [x] [Image Grid Layout][demo-image-grid] [[ref][ref-image-grid]] - DONE 🎉
 -   [ ] [Tooltip UI][demo-tooltip-ui] [[ref][ref-tooltip-ui]] - COMMING SOON 🚩
 -   [ ] [Simple Tabs][demo-simple-tabs] [[ref][ref-simple-tabs]] - COMMING SOON 🚩
 
@@ -36,7 +36,7 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [ref-accessible-form-ui]: https://roadmap.sh/projects/accessible-form-ui
 [demo-accessible-form-ui]: https://pine1611.github.io/frontend-projects/
 [ref-image-grid]: https://roadmap.sh/projects/image-grid
-[demo-image-grid]: https://pine1611.github.io/frontend-projects/
+[demo-image-grid]: https://pine1611.github.io/frontend-projects/08-image-grid-layout/public
 [ref-tooltip-ui]: https://roadmap.sh/projects/tooltip-ui
 [demo-tooltip-ui]: https://pine1611.github.io/frontend-projects/
 [ref-simple-tabs]: https://roadmap.sh/projects/simple-tabs
