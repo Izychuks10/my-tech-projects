@@ -14,7 +14,7 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 -   [x] [Datepicker UI][demo-datepicker-ui] [[ref][ref-datepicker-ui]] - DONE 🎉
 -   [ ] [Accessible Form UI][demo-accessible-form-ui] [[ref][ref-accessible-form-ui]] - ONGOING 🎪
 -   [x] [Image Grid Layout][demo-image-grid] [[ref][ref-image-grid]] - DONE 🎉
--   [ ] [Tooltip UI][demo-tooltip-ui] [[ref][ref-tooltip-ui]] - COMMING SOON 🚩
+-   [x] [Tooltip UI][demo-tooltip-ui] [[ref][ref-tooltip-ui]] - DONE 🎉
 -   [ ] [Simple Tabs][demo-simple-tabs] [[ref][ref-simple-tabs]] - COMMING SOON 🚩
 
 [Frontend Projects]: https://github.com/Pine1611/frontend-projects/blob/main/README.md
@@ -38,6 +38,6 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [ref-image-grid]: https://roadmap.sh/projects/image-grid
 [demo-image-grid]: https://pine1611.github.io/frontend-projects/08-image-grid-layout/public
 [ref-tooltip-ui]: https://roadmap.sh/projects/tooltip-ui
-[demo-tooltip-ui]: https://pine1611.github.io/frontend-projects/
+[demo-tooltip-ui]: https://pine1611.github.io/frontend-projects/09-tooltip-ui/public
 [ref-simple-tabs]: https://roadmap.sh/projects/simple-tabs
 [demo-simple-tabs]: https://pine1611.github.io/frontend-projects/
