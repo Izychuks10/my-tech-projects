@@ -1,0 +1,84 @@
+@include b("tooltip")
+    $tooltip_content: null
+
+    --transition-all-tooltip: 200ms all ease-in-out
+
+    padding: #{$space_68} #{$space_24}
+    @include e("content-wrap")
+        $tooltip_content: &
+
+        display: none
+        max-width: 260px
+        width: max-content
+        height: auto
+        position: absolute
+        top: 0
+        transform: translateY(-100%)
+        padding: #{$space_12}
+        transition: var(--transition-all-tooltip)
+        animation: slide-in 320ms backwards
+
+    @include e("content")
+        --bg-tooltip-content: #{$primary_100}
+
+        position: relative
+        font-size: calculateRem(14px)
+        padding: #{$space_16}
+        background: var(--bg-tooltip-content)
+        border-radius: #{$space_12}
+        border: 1px solid #{$primary_200}
+        &::after
+            content: " "
+            position: absolute
+            top: 100%
+            left: 50%
+            border-width: 10px
+            border-style: solid
+            border-color: var(--bg-tooltip-content) transparent transparent transparent
+            transform: translateX(-50%)
+
+    @include e("nav-item")
+        position: relative
+        margin: 0 #{$space_12}
+        display: flex
+        align-items: center
+        justify-content: center
+        label
+            display: block
+            padding: #{$space_8} #{$space_20}
+            border-radius: #{$space_4}
+            border: 1px solid transparent
+            cursor: pointer
+            transition: var(--transition-all-tooltip)
+            &:hover
+                background: #{$primary_50}
+                border-color: #{$primary_100}
+                color: #{$primary_400}
+        &::after
+            content: "💠"
+            width: 20px
+            height: 20px
+            display: flex
+            align-items: center
+            justify-content: center
+            position: absolute
+            top: 50%
+            right: -22px
+            transform: translateY(-50%)
+        &:last-child
+            &::after
+                content: none
+
+        &:hover #{$tooltip_content}
+            display: block
+            transla
+
+@keyframes slide-in
+    from
+        translate: 0 -100%
+        scale: 200% 1
+        opacity: 0
+    to
+        translate: 0 0
+        scale: 100% 1
+        opacity: 1

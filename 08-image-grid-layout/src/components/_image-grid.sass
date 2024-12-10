@@ -1,0 +1,46 @@
+@include b("grid")
+    @include e("wrap")
+
+        --border-radius: #{$space_32}
+        --transform-x: #{$space_4}
+        --transform-y: -#{$space_4}
+        --transition: 180ms all ease-in-out
+        --gap-columns: #{$space_20}
+
+        display: grid
+        grid-template-columns: repeat(4, minmax(0, 1fr))
+        gap: var(--gap-columns)
+        grid-auto-rows: 280px
+        grid-auto-flow: dense
+        @include for-screen("mobile-md", "max-w")
+            grid-template-columns: repeat(2, minmax(0, 1fr))
+
+    @include e("item")
+        $grid_item: &
+
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: var(--border-radius)
+        transition: var(--transition)
+        border: 1px solid transparent
+        &:hover
+            border-color: #{$light_grey}
+            transform: translate(var(--transform-x), var(--transform-y))
+            box-shadow: 12px 12px 80px 0 rgba(30, 37, 46, 0.3)
+            img
+                filter: grayscale(0)
+
+        img
+            display: block
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: var(--border-radius)
+            transition: var(--transition)
+            filter: grayscale(.8)
+
+        @include m("wide")
+            grid-column: span 2
+        @include m("tall")
+            grid-row: span 2
