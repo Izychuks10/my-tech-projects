@@ -1,0 +1,36 @@
+@include b("simple-tabs")
+
+    --tab-nav-fz: calculateRem(14px)
+    --tab-nav-text-color: #{$black28}
+    --tab-nav-border-color: #{$primary_200}
+    --tab-nav-text-color-active: #{$primary_400}
+    --tab-nav-border-color-active: #{$primary_400}
+    --transition-all: 180ms all ease-in-out
+
+    @include b("tab")
+
+        @include e("nav")
+            margin-bottom: #{$space_20}
+            border-bottom: 1px solid var(--tab-nav-border-color)
+            label
+                font-size: var(--tab-nav-fz)
+                font-weight: 500
+                color: var(--mid-grey)
+                cursor: pointer
+                display: block
+                padding: #{$space_12} #{$space_20}
+                margin-bottom: -1px
+                border-bottom: 2px solid transparent
+                transition: var(--transition-all)
+                &:hover, &.active
+                    color: var(--tab-nav-text-color-active)
+                    border-color: var(--tab-nav-border-color-active)
+                    background: #{$primary_50}
+
+        @include e("content")
+            display: none
+            padding: #{$space_32}
+            background: var(--light-grey)
+            border-radius: #{$space_24}
+            &.active
+                display: block
