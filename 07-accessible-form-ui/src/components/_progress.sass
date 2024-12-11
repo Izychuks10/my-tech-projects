@@ -1,0 +1,39 @@
+@include b("progress")
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+
+    @include m("circular")
+        --fg-circular: #{$light_grey}
+        --bg-circular-start: #{$primary_400}
+        --bg-circular-end: #{$anti_flash}
+        --bg-circular: conic-gradient(#{$primary_400} calc((360deg / 100) * 0.275), #{$light_grey} 0deg)
+        --dot-shadow: 0 0 10px rgba(252, 102, 102, .8), 0 0 30px rgba(252, 102, 102, .8)
+        --radius-circular: #{calculateRem(90px)}
+        --bg-radius-circular: #{calculateRem(90px)}
+
+        width: calc( var(--radius-circular) * 2 )
+        height: calc( var(--radius-circular) * 2 )
+        background: conic-gradient(var(--bg-circular-start) calc((360deg/100)*0.3), var(--bg-circular-end) 0deg)
+        border-radius: 50%
+        &::after
+            content: ""
+            width: calc( var(--radius-circular) * 1.9)
+            height: calc( var(--radius-circular) * 1.9)
+            background: var(--fg-circular)
+            border-radius: 50%
+
+    @include e("circular")
+
+    @include e("value")
+        font-size: 14px
+        position: absolute
+
+    @include e("dot")
+        width: calc( (var(--radius-circular) * 2) - (var(--radius-circular) * 1.9) )
+        height: calc( (var(--radius-circular) * 2) - (var(--radius-circular) * 1.9) )
+        background: #{$primary_400}
+        box-shadow: var(--dot-shadow)
+        position: absolute
+        border-radius: 50%
