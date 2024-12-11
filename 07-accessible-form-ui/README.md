@@ -1,10 +1,10 @@
 # Simple Tabs
 
-Create a simple tabs component using HTML, CSS, and JavaScript.
+Create an accessible form UI using HTML and CSS.
 
-> The goal of this project is to practive layout and positioning techniques with HTML and CSS. Also have a basic DOM manipulation and event handling in JavaScript.
+> The goal of this project for practice with HTML/CSS.
 
-Project based on [Datepicker UI][simple-tabs] from [Roadmap Ideas Frontend Projects][roadmap-frontend-projects]
+Project based on [Accessible Form UI][accessible-form-ui] from [Roadmap Ideas Frontend Projects][roadmap-frontend-projects]
 
 -   **Status**: DONE 🎉
 -   **Demo**: [here][demo-link] 🚀
@@ -22,5 +22,5 @@ I am Pine
 Happy Coding!
 
 [roadmap-frontend-projects]: https://roadmap.sh/frontend/projects
-[simple-tabs]: https://roadmap.sh/projects/simple-tabs
-[demo-link]: https://pine1611.github.io/frontend-projects/10-simple-tabs/public
+[accessible-form-ui]: https://roadmap.sh/projects/accessible-form-ui
+[demo-link]: https://pine1611.github.io/frontend-projects/07-accessible-form-ui/public
