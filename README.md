@@ -12,10 +12,15 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 -   [x] [Changelog Component][demo-changelog-component] [[ref][ref-changelog-component]] - DONE 🎉
 -   [x] [Testimonial Cards][demo-testimonial-cards] [[ref][ref-testimonial-cards]] - DONE 🎉
 -   [x] [Datepicker UI][demo-datepicker-ui] [[ref][ref-datepicker-ui]] - DONE 🎉
--   [ ] [Accessible Form UI][demo-accessible-form-ui] [[ref][ref-accessible-form-ui]] - ONGOING 🎪
+-   [x] [Accessible Form UI][demo-accessible-form-ui] [[ref][ref-accessible-form-ui]] - DONE 🎉
 -   [x] [Image Grid Layout][demo-image-grid] [[ref][ref-image-grid]] - DONE 🎉
 -   [x] [Tooltip UI][demo-tooltip-ui] [[ref][ref-tooltip-ui]] - DONE 🎉
 -   [x] [Simple Tabs][demo-simple-tabs] [[ref][ref-simple-tabs]] - DONE 🎉
+-   [ ] [Cookie Consent][demo-cookie-consent] [[ref][ref-cookie-consent]] - ONGOING 🎪
+-   [ ] [Restricted Textarea][demo-restricted-textarea] [[ref][ref-restricted-textarea]] - COMMING SOON 🚩
+-   [ ] [Accordion][demo-accordion] [[ref][ref-accordion]] - COMMING SOON 🚩
+-   [ ] [Age Calculator][demo-age-calculator] [[ref][ref-age-calculator]] - COMMING SOON 🚩
+-   [ ] [Flash Cards][demo-flash-cards] [[ref][ref-flash-cards]] - COMMING SOON 🚩
 
 [Frontend Projects]: https://github.com/Pine1611/frontend-projects/blob/main/README.md
 [ref-frontend]: https://roadmap.sh/frontend/projects
@@ -34,10 +39,20 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [ref-datepicker-ui]: https://roadmap.sh/projects/datepicker-ui
 [demo-datepicker-ui]: https://pine1611.github.io/frontend-projects/06-datepicker-ui/public
 [ref-accessible-form-ui]: https://roadmap.sh/projects/accessible-form-ui
-[demo-accessible-form-ui]: https://pine1611.github.io/frontend-projects/
+[demo-accessible-form-ui]: https://pine1611.github.io/frontend-projects/07-accessible-form-ui/public
 [ref-image-grid]: https://roadmap.sh/projects/image-grid
 [demo-image-grid]: https://pine1611.github.io/frontend-projects/08-image-grid-layout/public
 [ref-tooltip-ui]: https://roadmap.sh/projects/tooltip-ui
 [demo-tooltip-ui]: https://pine1611.github.io/frontend-projects/09-tooltip-ui/public
 [ref-simple-tabs]: https://roadmap.sh/projects/simple-tabs
 [demo-simple-tabs]: https://pine1611.github.io/frontend-projects/10-simple-tabs/public
+[ref-cookie-consent]: https://roadmap.sh/projects/cookie-consent
+[demo-cookie-consent]: https://pine1611.github.io/frontend-projects/
+[ref-restricted-textarea]: https://roadmap.sh/projects/restricted-textarea
+[demo-restricted-textarea]: https://pine1611.github.io/frontend-projects/
+[ref-accordion]: https://roadmap.sh/projects/accordion
+[demo-accordion]: https://pine1611.github.io/frontend-projects/
+[ref-age-calculator]: https://roadmap.sh/projects/age-calculator
+[demo-age-calculator]: https://pine1611.github.io/frontend-projects/
+[ref-flash-cards]: https://roadmap.sh/projects/flash-cards
+[demo-flash-cards]: https://pine1611.github.io/frontend-projects/
