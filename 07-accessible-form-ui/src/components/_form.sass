@@ -1,0 +1,97 @@
+@include b("form")
+    $form_input: null
+
+    --padding-all: #{$space_32}
+    --border-radius-all: #{$space_24}
+    --transition-all: 180ms all ease-in-out
+
+    @include e("container")
+        background: #{$white}
+        padding: var(--padding-all)
+        border-radius: var(--border-radius-all)
+
+    @include e("label")
+        font-size: calculateRem(14px)
+    @include e("input")
+        $form_input: &
+
+        color: var(--mid-grey)
+        font-size: calculateRem(15px)
+        line-height: calculateRem(20px)
+        width: 100%
+        padding: #{$space_8} #{$space_16}
+        border-radius: #{$space_8}
+        background: var(--anti-flash)
+        border: 1px solid var(--light-grey)
+        outline: none
+        transition: var(--transition-all)
+        &:focus, &:active
+            color: #{$black28}
+            background: #{$white}
+            border-color: var(--mid-grey)
+
+        @include m("error", false)
+            border-color: #{$primary_500}
+
+    @include e("with-icon")
+        position: relative
+        #{$form_input}
+            padding-right: 36px
+    @include e("icon")
+        width: 20px
+        height: 20px
+        cursor: pointer
+        position: absolute
+        right: 8px
+        top: 50%
+        transform: translateY(-50%)
+
+    @include e("progress")
+        padding: var(--padding-all)
+
+    @include e("steps")
+        padding: var(--padding-all)
+        border-radius: var(--border-radius-all)
+        background: #{$primary_50}
+
+        @include b("step")
+            font-size: calculateRem(14px)
+            padding: #{$space_4} 0
+            color: #{$mid_grey}
+
+            @include m("done", false)
+                position: relative
+                color: #{$primary_400}
+                // font-style: italic
+                width: max-content
+                text-decoration: line-through
+                &::after
+                    content: "🎯"
+                    // width: 100%
+                    // height: calculateRem(2px)
+                    // background: #{$primary_300}
+                    position: absolute
+                    top: 50%
+                    right: -24px
+                    transform: translateY(-50%)
+
+@include b("btn")
+    font-size: calculateRem(14px)
+    text-transform: uppercase
+    color: #{$primary_400}
+    padding: #{$space_12} #{$space_20}
+    background: #{$primary_50}
+    border: 1px solid #{$primary_100}
+    border-radius: #{$space_8}
+    outline: none
+    cursor: pointer
+    transition: var(--transition-all)
+    &:hover
+        background: #{$primary_100}
+        border-color: #{$primary_300}
+
+::placeholder
+    color: #{$light_grey}
+    opacity: 1
+::-ms-input-placeholder
+    color: #{$light_grey}
