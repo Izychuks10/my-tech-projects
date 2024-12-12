@@ -16,10 +16,10 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 -   [x] [Image Grid Layout][demo-image-grid] [[ref][ref-image-grid]] - DONE 🎉
 -   [x] [Tooltip UI][demo-tooltip-ui] [[ref][ref-tooltip-ui]] - DONE 🎉
 -   [x] [Simple Tabs][demo-simple-tabs] [[ref][ref-simple-tabs]] - DONE 🎉
--   [ ] [Cookie Consent][demo-cookie-consent] [[ref][ref-cookie-consent]] - ONGOING 🎪
+-   [x] [Cookie Consent][demo-cookie-consent] [[ref][ref-cookie-consent]] - DONE 🎉
 -   [ ] [Restricted Textarea][demo-restricted-textarea] [[ref][ref-restricted-textarea]] - COMMING SOON 🚩
 -   [ ] [Accordion][demo-accordion] [[ref][ref-accordion]] - COMMING SOON 🚩
--   [ ] [Age Calculator][demo-age-calculator] [[ref][ref-age-calculator]] - COMMING SOON 🚩
+-   [ ] [Age Calculator][demo-age-calculator] [[ref][ref-age-calculator]] - ONGOING 🎪
 -   [ ] [Flash Cards][demo-flash-cards] [[ref][ref-flash-cards]] - COMMING SOON 🚩
 
 [Frontend Projects]: https://github.com/Pine1611/frontend-projects/blob/main/README.md
@@ -47,7 +47,7 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [ref-simple-tabs]: https://roadmap.sh/projects/simple-tabs
 [demo-simple-tabs]: https://pine1611.github.io/frontend-projects/10-simple-tabs/public
 [ref-cookie-consent]: https://roadmap.sh/projects/cookie-consent
-[demo-cookie-consent]: https://pine1611.github.io/frontend-projects/
+[demo-cookie-consent]: https://pine1611.github.io/frontend-projects/11-cookie-consent/public
 [ref-restricted-textarea]: https://roadmap.sh/projects/restricted-textarea
 [demo-restricted-textarea]: https://pine1611.github.io/frontend-projects/
 [ref-accordion]: https://roadmap.sh/projects/accordion
