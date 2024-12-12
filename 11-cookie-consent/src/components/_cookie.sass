@@ -1,0 +1,79 @@
+@include b("cookiee")
+    --pad-all: #{$space_32}
+
+    width: 100%
+    max-width: 380px
+    position: fixed
+    bottom: #{$space_20}
+    right: #{$space_20}
+    background: #{$black38}
+    padding: #{$space_20}
+    border-radius: #{$space_32}
+    box-shadow: 0 0 32px rgba(0, 0, 0, .38)
+    @include for-screen("mobile-md", "max-w")
+        bottom: 0
+        left: #{$space_12}
+        right: #{$space_12}
+        width: auto
+
+    @include m("hide")
+        display: none
+
+    @include e("head")
+        justify-content: space-between
+        padding: 0 0 #{$space_12}
+        > img
+            display: block
+            max-width: 32px
+            max-height: 32px
+    @include e("content")
+        font-size: calculateRem(14px)
+        line-height: 20px
+        color: #{$anti_flash}
+        p
+            margin-bottom: #{$space_20}
+    @include e("accept")
+        width: 100%
+        padding: #{$space_12} #{$space_20}
+        border-radius: #{$space_16}
+        font-family: "Nunito Sans", sans-serif
+        font-size: calculateRem(14px)
+        font-weight: 600
+        text-transform: uppercase
+        color: #{$primary_400}
+        // transition: 180ms all ease-in-out
+        &:hover
+            background: #{$primary_100}
+    @include e("reject")
+        background: none
+
+    @include e("message-wrap")
+        content: ""
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        background: rgba(40, 40, 40, .38)
+        display: flex
+        align-items: center
+        justify-content: center
+        @include m("hide")
+            display: none
+    @include e("message")
+        width: 300px
+        height: auto
+        background: #{$anti_flash}
+        padding: #{$space_32}
+        border-radius: #{$space_24}
+        transition: 230ms all ease-in-out
+        text-align: center
+
+@include b("btn")
+    outline: none
+    border: none
+    cursor: pointer
+
+@include b("icon-svg")
+    width: 32px
+    height: 32px
