@@ -2,17 +2,26 @@
 
 Create an age calculator using HTML, CSS, and JavaScript. The app calculates and displays their exact age, including years, and months.
 
-> If you follow by guides of roadmap is use external package in npm, its include 2 packages: Javascript Datepicker and Luxon. But in this project, I have my own challenge is build a simple my own datepicker and also calculate function by my self research.
+> If you follow by guides of roadmap to use external package in npm, its include 2 packages: Javascript Datepicker and Luxon. But in this project, I challenge myself to research and build a simple my own datepicker and also calculate function by myself.
 
 All tasks I must todo:
 
--   [] Using previous project [FE06 - Datepicker UI][fe06-datepcicker-ui] I have done with UI, and now just begin build function for show up the calendar by Javascript.
--   [] Research caculates age, years and months for display the results.
+-   [x] Using previous project [FE06 - Datepicker UI][fe06-datepcicker-ui] I have done with UI, and now just begin build function for show up the calendar by Javascript.
+-   [x] Research caculates age, years and months for display the results.
 
-Project based on [Age Calcularot][age-calculator] from [Roadmap Ideas Frontend Projects][roadmap-frontend-projects]
+Project based on [Age Calculator][age-calculator] from [Roadmap Ideas Frontend Projects][roadmap-frontend-projects]
 
 -   **Status**: DONE 🎉
 -   **Demo**: [here][demo-link] 🚀
+
+## Notes
+
+Current calendar not really completed, just a basic calendar. I am thinking to impove for more featureds like:
+
+-   [ ] Can pick years and months when click the title calendar. Like some packages calendar: bootstrap or JS Datepicker etc...
+-   [ ] Format the date
+
+Will create and updates ASAP!!! :wink:
 
 ## License
 

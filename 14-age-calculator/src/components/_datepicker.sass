@@ -1,3 +1,5 @@
+$calendar: null
+
 @include b("datepicker")
 
     --datepicker-wrap-width: #{calculateRem(320px)}
@@ -14,16 +16,19 @@
         padding: #{$space_20}
         border-radius: #{$space_20}
         background: var(--light-grey)
+        position: relative
 
         @include b("calendar")
+            $calendar: &
+
             text-align: center
             @include e("days-name")
-                label
-                    font-size: var(--fz-calendar-title)
-                    font-weight: 600
-                    color: var(--heavy-grey)
+                font-size: var(--fz-calendar-title)
+                font-weight: 600
+                color: var(--heavy-grey)
             @include e("days")
-                label
+                span
+                    display: block
                     font-size: var(--fz-calendar-day)
                     font-weight: 500
                     color: var(--heavy-grey)
@@ -36,12 +41,58 @@
                         background: var(--anti-flash)
                         color: #{$primary_400}
                         border-color: #{$primary_200}
+            @include e("current-day")
+                color: #{$primary_400} !important
+                background-color: #{$primary_50} !important
+                border-color: #{$primary_100} !important
+            @include e("external-days")
+                color: #{$mid_grey} !important
 
-    @include e("month")
-        label
-            font-size: var(--fz-calendar-title)
-            font-weight: 600
-            color: #{$primary_400}
+            @include e("title")
+                font-size: var(--fz-calendar-title)
+                font-weight: 600
+                color: #{$primary_400}
+            @include e("btn")
+                border: 1px solid var(--border-color-input)
+                background: var(--anti-flash)
+                outline: none
+                display: flex
+                align-items: center
+                justify-content: center
+                padding: #{$space_4}
+                border-radius: #{$space_8}
+                transition: var(--transition-all)
+                cursor: pointer
+                width: 32px
+                height: 32px
+                &:hover
+                    border-color: var(--border-color-active)
+                    svg
+                        stroke: #{$primary_400}
+
+            @include e("pick-months")
+                display: none
+                background: #{$light_grey}
+                padding: #{$space_24}
+                border-radius: #{$space_20}
+                font-size: calculateRem(14px)
+                line-height: 20px
+                font-weight: 600
+                @include m("active", false)
+                    position: absolute
+                    display: grid
+                    top: 0
+                    bottom: 0
+                    left: 0
+                    right: 0
+                span
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    padding: #{$space_4}
+                    cursor: pointer
+                    &:hover
+                        background: #{$anti_flash}
 
     @include e("days-name")
 
@@ -55,24 +106,6 @@
         transition: var(--transition-all)
         &:hover, &:focus
             border-color: var(--border-color-active)
-
-    @include e("btn")
-        border: 1px solid var(--border-color-input)
-        background: var(--anti-flash)
-        outline: none
-        display: flex
-        align-items: center
-        justify-content: center
-        padding: #{$space_4}
-        border-radius: #{$space_8}
-        transition: var(--transition-all)
-        cursor: pointer
-        width: 32px
-        height: 32px
-        &:hover
-            border-color: var(--border-color-active)
-            svg
-                stroke: #{$primary_400}
 
 @include b("icon")
     width: 20px

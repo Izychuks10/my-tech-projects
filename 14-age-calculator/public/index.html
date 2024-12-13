@@ -59,15 +59,14 @@
             <div class="basis-8 flex flex--y text__center">
                 <h1 class="title">FE14 - Age Caculator</h1>
                 <i class="fz-sm">The app calculates and displays their exact age, including years, and months.</i>
-                <p>If you follow guides of <a href="https://roadmap.sh/">roadmap.sh</a>: use external package in npm,
-                    include 2 packages: Javascript Datepicker and
-                    Luxon. But in this project, I have my own challenge is build a simple my own datepicker and also
-                    calculate function by my self research.</p>
+                <p>If you follow guides of <a href="https://roadmap.sh/">roadmap.sh</a>: use external packages in npm,
+                    include Javascript Datepicker and Luxon. But in this project, I challenge myself to research and
+                    build a simple my own datepicker and also calculate function by myself.</p>
             </div>
             <div class="basis-10">
                 <h4>All tasks I must to do:</h4>
                 <ul class="list list--disc">
-                    <li>Using previous project <a
+                    <li>Use previous project <a
                             href="https://github.com/Pine1611/frontend-projects/blob/main/06-datepicker-ui/README.md">FE06
                             - Datepicker UI</a> I have done with UI, and now just begin build function for show up the
                         calendar by Javascript.</li>
@@ -83,25 +82,26 @@
                 <div class="flex flex--y gap-5 datepicker__wrap">
                     <!-- datepicker input -->
                     <div class="flex flex--nowrap gap-3 space-bet">
-                        <input class="datepicker__input grow-1" type="text" name="date" placeholder="M d, yyy" />
+                        <input class="datepicker__input grow-1" id="datepicker__input-js" type="text" name="date"
+                            placeholder="mm/dd/yyyy" />
 
-                        <button class="datepicker__btn">
+                        <!-- <button class="datepicker__btn">
                             <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
                                 stroke-width="1.5" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round"
                                     d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
                             </svg>
-                        </button>
+                        </button> -->
 
                     </div>
                     <!-- /end datepicker input -->
 
                     <!-- calendar -->
-                    <div class="flex flex--y gap-3 datepicker__calendar">
+                    <div class="flex flex--y gap-3 datepicker__calendar" id="calendar-js">
 
-                        <div class="flex flex--x flex--nowrap space-bet al-center datepicker__month">
+                        <div class="flex flex--x flex--nowrap space-bet al-center">
 
-                            <button class="datepicker__btn">
+                            <button class="calendar__btn calendar__btn-js" data-value="prev">
                                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -109,9 +109,11 @@
                                 </svg>
                             </button>
 
-                            <label class="">December 2024</label>
+                            <span class="calendar__title" id="calendar__title-js">
+                                <!-- dynamic calendar title here -->
+                            </span>
 
-                            <button class="datepicker__btn">
+                            <button class="calendar__btn calendar__btn-js" data-value="next">
                                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -122,59 +124,31 @@
                         </div>
 
                         <div class="flex flex--y gap-3 calendar">
-                            <div class="grid grid-7 calendar__days-name">
-                                <label>Sun</label>
-                                <label>Mon</label>
-                                <label>Tue</label>
-                                <label>Wed</label>
-                                <label>Thu</label>
-                                <label>Fri</label>
-                                <label>Sat</label>
+                            <div class="grid grid-7 calendar__days-name" id="calendar__days-name-js">
+                                <!-- dynamic show days week name here -->
                             </div>
-                            <div class="calendar__days">
-                                <div class="grid grid-7 calendar__week-1">
-                                    <label>1</label>
-                                    <label>2</label>
-                                    <label>3</label>
-                                    <label>4</label>
-                                    <label>5</label>
-                                    <label>6</label>
-                                    <label>7</label>
-                                </div>
-                                <div class="grid grid-7 calendar__week-2">
-                                    <label>8</label>
-                                    <label>9</label>
-                                    <label>10</label>
-                                    <label>11</label>
-                                    <label>12</label>
-                                    <label>13</label>
-                                    <label>14</label>
-                                </div>
-                                <div class="grid grid-7 calendar__week-3">
-                                    <label>15</label>
-                                    <label>16</label>
-                                    <label>17</label>
-                                    <label>18</label>
-                                    <label>19</label>
-                                    <label>20</label>
-                                    <label>21</label>
-                                </div>
-                                <div class="grid grid-7 calendar__week-4">
-                                    <label>22</label>
-                                    <label>23</label>
-                                    <label>24</label>
-                                    <label>25</label>
-                                    <label>26</label>
-                                    <label>27</label>
-                                    <label>28</label>
-                                </div>
-                                <div class="grid grid-7 calendar__week-5">
-                                    <label>29</label>
-                                    <label>30</label>
-                                    <label>31</label>
-                                </div>
+
+                            <div class="calendar__days" id="calendar__days-js">
+                                <!-- dynamic show calendar days here -->
                             </div>
                         </div>
+
+                        <!-- <div class="grid grid-4 calendar__pick-months calendar__pick-months--active">
+                            <span>Jan</span>
+                            <span>Feb</span>
+                            <span>Mar</span>
+                            <span>Apr</span>
+
+                            <span>May</span>
+                            <span>Jun</span>
+                            <span>Jul</span>
+                            <span>Aug</span>
+
+                            <span>Sep</span>
+                            <span>Oct</span>
+                            <span>Nov</span>
+                            <span>Dec</span>
+                        </div> -->
 
                     </div>
                     <!-- /end calendar -->
@@ -182,11 +156,9 @@
 
             </div>
             <div class="basis-sm-6 basis-12 flex flex--center">
-
-                <div class="age-caculator__result">
-                    Result here
+                <div class="calculator__result">
+                    Your are <span class="calculator__age-month" id="result__age-js">0 years old</span>
                 </div>
-
             </div>
 
         </section>
