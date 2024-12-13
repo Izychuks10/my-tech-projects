@@ -17,9 +17,9 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 -   [x] [Tooltip UI][demo-tooltip-ui] [[ref][ref-tooltip-ui]] - DONE 🎉
 -   [x] [Simple Tabs][demo-simple-tabs] [[ref][ref-simple-tabs]] - DONE 🎉
 -   [x] [Cookie Consent][demo-cookie-consent] [[ref][ref-cookie-consent]] - DONE 🎉
--   [ ] [Restricted Textarea][demo-restricted-textarea] [[ref][ref-restricted-textarea]] - COMMING SOON 🚩
--   [ ] [Accordion][demo-accordion] [[ref][ref-accordion]] - COMMING SOON 🚩
--   [ ] [Age Calculator][demo-age-calculator] [[ref][ref-age-calculator]] - ONGOING 🎪
+-   [ ] [Restricted Textarea][demo-restricted-textarea] [[ref][ref-restricted-textarea]] - ONGOING 🎪
+-   [ ] [Accordion][demo-accordion] [[ref][ref-accordion]] - ONGOING 🎪
+-   [x] [Age Calculator][demo-age-calculator] [[ref][ref-age-calculator]] - DONE 🎉
 -   [ ] [Flash Cards][demo-flash-cards] [[ref][ref-flash-cards]] - COMMING SOON 🚩
 
 [Frontend Projects]: https://github.com/Pine1611/frontend-projects/blob/main/README.md
@@ -53,6 +53,6 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [ref-accordion]: https://roadmap.sh/projects/accordion
 [demo-accordion]: https://pine1611.github.io/frontend-projects/
 [ref-age-calculator]: https://roadmap.sh/projects/age-calculator
-[demo-age-calculator]: https://pine1611.github.io/frontend-projects/
+[demo-age-calculator]: https://pine1611.github.io/frontend-projects/14-age-calculator/public
 [ref-flash-cards]: https://roadmap.sh/projects/flash-cards
 [demo-flash-cards]: https://pine1611.github.io/frontend-projects/
