@@ -1,0 +1,10 @@
+@include b("calculator")
+    @include e("result")
+        font-size: calculateRem(14px)
+        color: #{$black38}
+        background: #{$primary_50}
+        padding: #{$space_20}
+        border-radius: #{$space_20}
+    @include e("age-month")
+        font-weight: 600
+        color: #{$primary_400}
