@@ -1,0 +1,55 @@
+@include b("accordion")
+    $accordionTitle: null
+    $accordionContent: null
+    --transition-all: 230ms all ease-in-out
+    --space-title-content: #{$space_12} #{$space_20}
+
+    display: flex
+    flex-direction: column
+    gap: #{$space_12}
+
+    @include e("title")
+        $accordionTitle: &
+        font-size: calculateRem(15px)
+        line-height: 22px
+        cursor: pointer
+        padding: var(--space-title-content)
+        transition: var(--transition-all)
+        &:hover
+            color: #{$primary_400}
+
+    @include e("content")
+        $accordionContent: &
+        display: none
+        font-size: calculateRem(14px)
+        line-height: 20px
+        color: #{$black38}
+        padding: var(--space-title-content)
+        transition: 230ms all ease-in-out
+        animation: show-in 620ms forwards
+
+    @include e("item")
+        background: #{$light_grey}
+        border: 1px solid #{$mid_grey}
+        border-radius: #{$space_8}
+        overflow: hidden
+        @include m("active")
+            border-color: #{$primary_100}
+            background: #{$primary_50}
+            height: auto
+            transition: 420ms height ease-in
+            // animation: slide-in 420ms forwards
+            #{$accordionTitle}
+                color: #{$primary_400}
+                border-bottom: 1px solid #{$primary_100}
+                background: #{$primary_100}
+            #{$accordionContent}
+                display: block
+
+@keyframes show-in
+    from
+        translate: 0 100%
+        opacity: 0
+    to
+        translate: 0 0
+        opacity: 1
