@@ -1,4 +1,4 @@
-# Simple Tabs
+# Accessible Form UI
 
 Create an accessible form UI using HTML and CSS.
 
