@@ -1,0 +1,37 @@
+@include b("txtarea")
+    $txtarea: null
+    $counter: null
+    --border-radius: #{$space_12}
+
+    position: relative
+
+    @include e("input")
+        $txtarea: &
+        resize: none
+        outline: none
+        width: 100%
+        display: block
+        font-size: calculateRem(14px)
+        color: #{$heavy_grey}
+        padding: #{$space_16} #{$space_16} #{$space_24}
+        margin: 0
+        border: 1px solid #{$light_grey}
+        border-radius: var(--border-radius)
+        background: #{$anti_flash}
+        box-shadow: 0 12px 24px rgba(38, 38, 38, 0.18)
+
+    @include e("counter")
+        $counter: &
+        font-size: calculateRem(12px)
+        line-height: 16px
+        color: #{$mid_grey}
+        display: block
+        position: absolute
+        right: #{$space_16}
+        bottom: #{$space_8}
+
+    @include m("maximum")
+        #{$txtarea}
+            border-color: #{$primary_400}
+        #{$txtarea}, #{$counter}
+            color: #{$primary_400}
