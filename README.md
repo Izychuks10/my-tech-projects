@@ -17,10 +17,10 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 -   [x] [Tooltip UI][demo-tooltip-ui] [[ref][ref-tooltip-ui]] - DONE 🎉
 -   [x] [Simple Tabs][demo-simple-tabs] [[ref][ref-simple-tabs]] - DONE 🎉
 -   [x] [Cookie Consent][demo-cookie-consent] [[ref][ref-cookie-consent]] - DONE 🎉
--   [ ] [Restricted Textarea][demo-restricted-textarea] [[ref][ref-restricted-textarea]] - COMMING SOON 🚩
--   [ ] [Accordion][demo-accordion] [[ref][ref-accordion]] - COMMING SOON 🚩
--   [ ] [Age Calculator][demo-age-calculator] [[ref][ref-age-calculator]] - ONGOING 🎪
--   [ ] [Flash Cards][demo-flash-cards] [[ref][ref-flash-cards]] - COMMING SOON 🚩
+-   [x] [Restricted Textarea][demo-restricted-textarea] [[ref][ref-restricted-textarea]] - DONE 🎉
+-   [x] [Accordion][demo-accordion] [[ref][ref-accordion]] - DONE 🎉
+-   [x] [Age Calculator][demo-age-calculator] [[ref][ref-age-calculator]] - DONE 🎉
+-   [ ] [Flash Cards][demo-flash-cards] [[ref][ref-flash-cards]] - ONGOING 🎪
 
 [Frontend Projects]: https://github.com/Pine1611/frontend-projects/blob/main/README.md
 [ref-frontend]: https://roadmap.sh/frontend/projects
@@ -49,10 +49,10 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [ref-cookie-consent]: https://roadmap.sh/projects/cookie-consent
 [demo-cookie-consent]: https://pine1611.github.io/frontend-projects/11-cookie-consent/public
 [ref-restricted-textarea]: https://roadmap.sh/projects/restricted-textarea
-[demo-restricted-textarea]: https://pine1611.github.io/frontend-projects/
+[demo-restricted-textarea]: https://pine1611.github.io/frontend-projects/12-restricted-textarea/public
 [ref-accordion]: https://roadmap.sh/projects/accordion
-[demo-accordion]: https://pine1611.github.io/frontend-projects/
+[demo-accordion]: https://pine1611.github.io/frontend-projects/13-accordion/public
 [ref-age-calculator]: https://roadmap.sh/projects/age-calculator
-[demo-age-calculator]: https://pine1611.github.io/frontend-projects/
+[demo-age-calculator]: https://pine1611.github.io/frontend-projects/14-age-calculator/public
 [ref-flash-cards]: https://roadmap.sh/projects/flash-cards
 [demo-flash-cards]: https://pine1611.github.io/frontend-projects/
