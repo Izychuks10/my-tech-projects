@@ -20,7 +20,7 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 -   [x] [Restricted Textarea][demo-restricted-textarea] [[ref][ref-restricted-textarea]] - DONE 🎉
 -   [x] [Accordion][demo-accordion] [[ref][ref-accordion]] - DONE 🎉
 -   [x] [Age Calculator][demo-age-calculator] [[ref][ref-age-calculator]] - DONE 🎉
--   [ ] [Flash Cards][demo-flash-cards] [[ref][ref-flash-cards]] - ONGOING 🎪
+-   [x] [Flash Cards][demo-flash-cards] [[ref][ref-flash-cards]] - DONE 🎉
 
 [Frontend Projects]: https://github.com/Pine1611/frontend-projects/blob/main/README.md
 [ref-frontend]: https://roadmap.sh/frontend/projects
@@ -55,4 +55,4 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [ref-age-calculator]: https://roadmap.sh/projects/age-calculator
 [demo-age-calculator]: https://pine1611.github.io/frontend-projects/14-age-calculator/public
 [ref-flash-cards]: https://roadmap.sh/projects/flash-cards
-[demo-flash-cards]: https://pine1611.github.io/frontend-projects/
+[demo-flash-cards]: https://pine1611.github.io/frontend-projects/15-flash-cards/public
