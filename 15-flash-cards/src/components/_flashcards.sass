@@ -1,0 +1,51 @@
+@include b("flashcards")
+    --border-radius: #{$space_8}
+    --min-height-content: #{calculateRem(320px)}
+    --pad-wrap: #{$space_8}
+    --pad-box: #{$space_12} #{$space_20}
+
+    @include e("wrap")
+        padding: var(--pad-wrap)
+        border: 1px solid #{$mid_grey}
+        background: #{$anti_flash}
+        border-radius: var(--border-radius)
+
+    @include e("box")
+        padding: var(--pad-box)
+        background: #{$light_grey}
+        border-radius: var(--border-radius)
+    @include e("content")
+        min-height: var(--min-height-content)
+        position: relative
+
+@include b("faq")
+    transition: 230ms all ease-in-out
+    transform-origin: 50% 0
+    transform-style: preserve-3d
+    display: block
+    position: absolute
+    margin: var(--pad-wrap)
+    padding: var(--pad-box)
+    background: #{$light_grey}
+
+    @include m("question", false)
+        // transform: rotateX(90deg)
+        transform-origin: 50% 0
+    @include m("answer", false)
+
+@include b("hide")
+    transition: 230ms all ease-in-out
+    transform: rotateX(90deg) translateY(-100%)
+    // transform-origin: 50% 0
+    // animation: flip-out 320ms forwards
+
+@keyframes flip-in
+    from
+        transform: scaleY(0)
+    to
+        transform: scaleY(1)
+@keyframes flip-out
+    from
+        transform: scaleY(1)
+    to
+        transform: scaleY(0)
