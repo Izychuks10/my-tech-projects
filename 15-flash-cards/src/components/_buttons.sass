@@ -1,0 +1,20 @@
+@include b("btn")
+
+    outline: none
+    cursor: pointer
+    padding: #{$space_8} #{$space_12}
+    background: #{$primary_50}
+    border: 1px solid #{$primary_200}
+    border-radius: #{$space_8}
+    color: #{$primary_400}
+    font-size: calculateRem(13px)
+    transition: 180ms all ease-in
+    &:hover
+        color: #{$white}
+        background: #{$primary_300}
+        border-color: #{$primary_300}
+    &:disabled
+        cursor: not-allowed
+        background: #{$light_grey}
+        color: #{$mid_grey}
+        border-color: #{$mid_grey}
