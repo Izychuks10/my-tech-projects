@@ -4,32 +4,31 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 
 ## [Frontend Projects][Frontend Projects] [[ref][ref-frontend]] / [[full-demo][full-demo]]
 
-|      🚩      |   🎪    |  🎉  |
-| :----------: | :-----: | :--: |
-| Comming Soon | Ongoing | Done |
+|      🚩      |   🎪    |  🎉  |       ⛺       |
+| :----------: | :-----: | :--: | :------------: |
+| Comming Soon | Ongoing | Done | Camping :wink: |
 
-| 🌱 Beginner                                                                         | 🍃 Intermediate                                                                         | 🍁 Advanced                                                                |
-| :---------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------- |
-| 🎉 [Single Page CV][demo-single-page-cv] [[ref][ref-single-page-cv]]                | 🎪 [Custom Dropdown][demo-custom-dropdown] [[ref][ref-custom-dropdown]]                 | 🚩 [24hr Story Feature][demo-stories-feature] [[ref][ref-stories-feature]] |
-| 🎉 [Basic HTML Website][demo-basic-html-website] [[ref][ref-basic-html-website]]    | 🚩 [Task Tracker][demo-task-tracker-js] [[ref][ref-task-tracker-js]]                    |                                                                            |
-| 🎉 [Personal Portfolio][demo-personal-portfolio] [[ref][ref-personal-portfolio]]    | 🚩 [GH Random Repo][demo-github-random-repo] [[ref][ref-github-random-repo]]            |                                                                            |
-| 🎉 [Changelog Component][demo-changelog-component] [[ref][ref-changelog-component]] | 🚩 [Reddit Client][demo-reddit-client] [[ref][ref-reddit-client]]                       |                                                                            |
-| 🎉 [Testimonial Cards][demo-testimonial-cards] [[ref][ref-testimonial-cards]]       | 🚩 [Temperature Convert][demo-temperature-converter] [[ref][ref-temperature-converter]] |                                                                            |
-| 🎉 [Datepicker UI][demo-datepicker-ui] [[ref][ref-datepicker-ui]]                   | 🚩 [Pomodoro Timer][demo-pomodoro-timer] [[ref][ref-pomodoro-timer]]                    |                                                                            |
-| 🎉 [Accessible Form UI][demo-accessible-form-ui] [[ref][ref-accessible-form-ui]]    | 🚩 [Quiz App][demo-quiz-app] [[ref][ref-quiz-app]]                                      |                                                                            |
-| 🎉 [Image Grid Layout][demo-image-grid] [[ref][ref-image-grid]]                     | 🚩 [Weather Web App][demo-weather-app] [[ref][ref-weather-app]]                         |                                                                            |
-| 🎉 [Tooltip UI][demo-tooltip-ui] [[ref][ref-tooltip-ui]]                            |                                                                                         |                                                                            |
-| 🎉 [Simple Tabs][demo-simple-tabs] [[ref][ref-simple-tabs]]                         |                                                                                         |                                                                            |
-| 🎉 [Cookie Consent][demo-cookie-consent] [[ref][ref-cookie-consent]]                |                                                                                         |                                                                            |
-| 🎉 [Restricted Textarea][demo-restricted-textarea] [[ref][ref-restricted-textarea]] |                                                                                         |                                                                            |
-| 🎉 [Accordion][demo-accordion] [[ref][ref-accordion]]                               |                                                                                         |                                                                            |
-| 🎉 [Age Calculator][demo-age-calculator] [[ref][ref-age-calculator]]                |                                                                                         |                                                                            |
-| 🎉 [Flash Cards][demo-flash-cards] [[ref][ref-flash-cards]]                         |                                                                                         |                                                                            |
+|      | 🌱 Beginner                                                                      |      | 🍃 Intermediate                                                                      |     | 🍁 Advanced                                                             |
+| :--: | :------------------------------------------------------------------------------- | :--: | :----------------------------------------------------------------------------------- | :-: | :---------------------------------------------------------------------- |
+|  🎉  | [Single Page CV][demo-single-page-cv] [[ref][ref-single-page-cv]]                | 🎉⛺ | [Custom Dropdown][demo-custom-dropdown] [[ref][ref-custom-dropdown]]                 | 🚩  | [24hr Story Feature][demo-stories-feature] [[ref][ref-stories-feature]] |
+|  🎉  | [Basic HTML Website][demo-basic-html-website] [[ref][ref-basic-html-website]]    |  🚩  | [Task Tracker][demo-task-tracker-js] [[ref][ref-task-tracker-js]]                    |     |
+|  🎉  | [Personal Portfolio][demo-personal-portfolio] [[ref][ref-personal-portfolio]]    |  🚩  | [GH Random Repo][demo-github-random-repo] [[ref][ref-github-random-repo]]            |     |
+|  🎉  | [Changelog Component][demo-changelog-component] [[ref][ref-changelog-component]] |  🚩  | [Reddit Client][demo-reddit-client] [[ref][ref-reddit-client]]                       |     |
+| 🎉⛺ | [Testimonial Cards][demo-testimonial-cards] [[ref][ref-testimonial-cards]]       |  🎪  | [Temperature Convert][demo-temperature-converter] [[ref][ref-temperature-converter]] |     |
+|  🎉  | [Datepicker UI][demo-datepicker-ui] [[ref][ref-datepicker-ui]]                   |  🚩  | [Pomodoro Timer][demo-pomodoro-timer] [[ref][ref-pomodoro-timer]]                    |     |
+|  🎉  | [Accessible Form UI][demo-accessible-form-ui] [[ref][ref-accessible-form-ui]]    |  🚩  | [Quiz App][demo-quiz-app] [[ref][ref-quiz-app]]                                      |     |
+|  🎉  | [Image Grid Layout][demo-image-grid] [[ref][ref-image-grid]]                     |  🚩  | [Weather Web App][demo-weather-app] [[ref][ref-weather-app]]                         |     |
+|  🎉  | [Tooltip UI][demo-tooltip-ui] [[ref][ref-tooltip-ui]]                            |      |                                                                                      |     |
+|  🎉  | [Simple Tabs][demo-simple-tabs] [[ref][ref-simple-tabs]]                         |      |                                                                                      |     |
+|  🎉  | [Cookie Consent][demo-cookie-consent] [[ref][ref-cookie-consent]]                |      |                                                                                      |     |
+|  🎉  | [Restricted Textarea][demo-restricted-textarea] [[ref][ref-restricted-textarea]] |      |                                                                                      |     |
+|  🎉  | [Accordion][demo-accordion] [[ref][ref-accordion]]                               |      |                                                                                      |     |
+| 🎉⛺ | [Age Calculator][demo-age-calculator] [[ref][ref-age-calculator]]                |      |                                                                                      |     |
+|  🎉  | [Flash Cards][demo-flash-cards] [[ref][ref-flash-cards]]                         |      |                                                                                      |     |
 
 [Frontend Projects]: https://github.com/Pine1611/frontend-projects/blob/main/README.md
 [ref-frontend]: https://roadmap.sh/frontend/projects
 [full-demo]: https://pine1611.github.io/frontend-projects
-[ref-single-page-cv]: https://roadmap.sh/projects/single-page-cv
 [ref-single-page-cv]: https://roadmap.sh/projects/single-page-cv
 [demo-single-page-cv]: https://pine1611.github.io/frontend-projects/01-single-page-cv/public
 [ref-basic-html-website]: https://roadmap.sh/projects/basic-html-website
@@ -61,7 +60,7 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [ref-flash-cards]: https://roadmap.sh/projects/flash-cards
 [demo-flash-cards]: https://pine1611.github.io/frontend-projects/15-flash-cards/public
 [ref-custom-dropdown]: https://roadmap.sh/projects/custom-dropdown
-[demo-custom-dropdown]: https://pine1611.github.io/frontend-projects/
+[demo-custom-dropdown]: https://pine1611.github.io/frontend-projects/16-custom-dropdown/public
 [ref-task-tracker-js]: https://roadmap.sh/projects/task-tracker-js
 [demo-task-tracker-js]: https://pine1611.github.io/frontend-projects/
 [ref-github-random-repo]: https://roadmap.sh/projects/github-random-repo
