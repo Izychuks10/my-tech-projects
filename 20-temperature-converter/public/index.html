@@ -70,7 +70,7 @@
                         <input class="form__input form__input--from" type="text" name="valueConvert" id="valueConvert"
                             value="0" required />
                         <label class="form__title" for="valueConvert">Value Convert</label>
-                        <label class="form__error-msg" id="invalidValueConvert"></label>
+                        <label class="form__error-msg" for="valueConvert" id="invalidValueConvert"></label>
                     </div>
 
                     <div class="select__box converter__unit select-js" target-data="from">
@@ -113,10 +113,10 @@
                         </ul>
                     </div>
 
-                    <button class="btn">Convert</button>
+                    <button class="btn" id="btnConvert">Convert</button>
                 </div>
 
-                <div class="converter__result">
+                <div class="converter__result" id="result-js">
                     result here
                 </div>
             </div>
