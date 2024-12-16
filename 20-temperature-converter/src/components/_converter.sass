@@ -1,0 +1,54 @@
+@include b("converter")
+    $converterWrap: null
+    $converterUnit: null
+    $converterValue: null
+
+    --gap-all: #{calculateRem(20px)}
+
+    width: 80%
+    margin: 0 auto
+
+    @include e("wrap")
+        $converterWrap: &
+
+        display: flex
+        flex-direction: row
+        flex-flow: row wrap
+        gap: var(--gap-all)
+        align-items: center
+        justify-content: center
+        margin-bottom: #{$space_32}
+
+    @include e("value")
+        $converterValue: &
+
+        width: calc( 30% - var(--gap-all) )
+        margin-bottom: #{$space_12}
+
+    @include e("unit")
+        $converterUnit: &
+
+        width: calc( 25% - var(--gap-all) )
+
+    @include e("result")
+        background: #{$light_grey}
+        border-radius: #{$space_32}
+        padding: #{$space_32}
+        display: flex
+        align-items: center
+        justify-content: center
+        font-size: #{calcualteRem(16px)}
+        font-weight: 600
+        text-transform: uppercase
+
+    @include for-screen("tablet", "max-w")
+        #{$converterValue}
+            width: calc( 100% - var(--gap-all) )
+        #{$converterUnit}
+            width: calc( 50% - var(--gap-all) )
+
+    @include for-screen("mobile-md", "max-w")
+        #{$converterWrap}, #{$converterValue}, #{$converterUnit}
+            width: 100%
+        #{$converterWrap}
+            flex-direction: column
