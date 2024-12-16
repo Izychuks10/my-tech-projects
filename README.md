@@ -12,9 +12,9 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 | :--: | :------------------------------------------------------------------------------- | :--: | :----------------------------------------------------------------------------------- | :-: | :---------------------------------------------------------------------- |
 |  🎉  | [Single Page CV][demo-single-page-cv] [[ref][ref-single-page-cv]]                | 🎉⛺ | [Custom Dropdown][demo-custom-dropdown] [[ref][ref-custom-dropdown]]                 | 🚩  | [24hr Story Feature][demo-stories-feature] [[ref][ref-stories-feature]] |
 |  🎉  | [Basic HTML Website][demo-basic-html-website] [[ref][ref-basic-html-website]]    |  🚩  | [Task Tracker][demo-task-tracker-js] [[ref][ref-task-tracker-js]]                    |     |
-|  🎉  | [Personal Portfolio][demo-personal-portfolio] [[ref][ref-personal-portfolio]]    |  🚩  | [GH Random Repo][demo-github-random-repo] [[ref][ref-github-random-repo]]            |     |
+|  🎉  | [Personal Portfolio][demo-personal-portfolio] [[ref][ref-personal-portfolio]]    |  🎪  | [GH Random Repo][demo-github-random-repo] [[ref][ref-github-random-repo]]            |     |
 |  🎉  | [Changelog Component][demo-changelog-component] [[ref][ref-changelog-component]] |  🚩  | [Reddit Client][demo-reddit-client] [[ref][ref-reddit-client]]                       |     |
-| 🎉⛺ | [Testimonial Cards][demo-testimonial-cards] [[ref][ref-testimonial-cards]]       |  🎪  | [Temperature Convert][demo-temperature-converter] [[ref][ref-temperature-converter]] |     |
+| 🎉⛺ | [Testimonial Cards][demo-testimonial-cards] [[ref][ref-testimonial-cards]]       |  🎉  | [Temperature Convert][demo-temperature-converter] [[ref][ref-temperature-converter]] |     |
 |  🎉  | [Datepicker UI][demo-datepicker-ui] [[ref][ref-datepicker-ui]]                   |  🚩  | [Pomodoro Timer][demo-pomodoro-timer] [[ref][ref-pomodoro-timer]]                    |     |
 |  🎉  | [Accessible Form UI][demo-accessible-form-ui] [[ref][ref-accessible-form-ui]]    |  🚩  | [Quiz App][demo-quiz-app] [[ref][ref-quiz-app]]                                      |     |
 |  🎉  | [Image Grid Layout][demo-image-grid] [[ref][ref-image-grid]]                     |  🚩  | [Weather Web App][demo-weather-app] [[ref][ref-weather-app]]                         |     |
@@ -68,7 +68,7 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [ref-reddit-client]: https://roadmap.sh/projects/reddit-client
 [demo-reddit-client]: https://pine1611.github.io/frontend-projects/
 [ref-temperature-converter]: https://roadmap.sh/projects/temperature-converter
-[demo-temperature-converter]: https://pine1611.github.io/frontend-projects/
+[demo-temperature-converter]: https://pine1611.github.io/frontend-projects/20-temperature-converter/public
 [ref-pomodoro-timer]: https://roadmap.sh/projects/pomodoro-timer
 [demo-pomodoro-timer]: https://pine1611.github.io/frontend-projects/
 [ref-quiz-app]: https://roadmap.sh/projects/quiz-app
