@@ -1,0 +1,16 @@
+@include b("btn")
+
+    background: #{$light_grey}
+    border: 1px solid #{$heavy_grey}
+    border-radius: #{$space_8}
+    padding: #{$space_12} #{$space_20}
+    display: block
+    font-size: #{calculateRem(14px)}
+    color: #{$black38}
+    text-transform: uppercase
+    cursor: pointer
+    transition: 180ms all ease-in-out
+    &:hover
+        background: #{$primary_100}
+        border-color: #{$primary_300}
+        color: #{$primary_400}

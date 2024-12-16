@@ -1,0 +1,74 @@
+@include b("form")
+    $form_title: null
+
+    @include e("wrap")
+        --color-title: #{$mid_grey}
+        --color-title-actived: #{$heavy_grey}
+        --color-from: #{$primary_400}
+        --color-error: #{$primary_600}
+        --fz-input: #{calculateRem(14px)}
+        --fz-title: #{calculateRem(14px)}
+        --fz-title-actived: #{calculateRem(12px)}
+        --lh-input: #{$space_20}
+        --lh-title: #{$space_16}
+        --gap-y: #{$space_12}
+        --transition: 230ms ease all
+
+        position: relative
+
+    @include e("title")
+        $form_title: &
+
+        position: absolute
+        top: 50%
+        left: 0
+        font-size: var(--fz-title)
+        line-height: var(--lh-title)
+        color: var(--color-title)
+        text-transform: uppercase
+        cursor: pointer
+        transform: translateY(-50%)
+        transition: transform 230ms ease-in-out
+
+    @include e("input")
+        font-size: var(--fz-input)
+        line-height: var(--lh-input)
+        font-weight: bold
+        padding: var(--gap-y) 0
+        background-color: transparent
+        width: 100%
+        outline: none
+        border: none
+        &:focus + #{$form_title},
+        &:valid + #{$form_title}
+            transform: translateY(-200%)
+            color: var(--color-title-actived)
+            font-size: var(--fz-title-actived)
+            font-style: italic
+
+        @include m("from")
+            box-shadow: 0 1px var(--color-from)
+            color: var(--color-from)
+
+    @include e("error")
+        box-shadow: none !important
+        border-bottom: 1px solid var(--color-error)
+    @include e("error-msg")
+        position: absolute
+        display: block
+        bottom: -24px
+        font-size: calc( var(--fz-title) - 2px )
+        font-style: italic
+        font-weight: 300
+        color: var(--color-error)
+        transform: rotateX(90deg)
+        transition: var(--transition)
+        @include m("show")
+            transform: rotateX(0)
+            animation: 230ms ease hide-error-msg
+
+@keyframes hide-error-msg
+    0%
+        transform: rotateX(90deg)
+    100%
+        transform: rotateX(0)
