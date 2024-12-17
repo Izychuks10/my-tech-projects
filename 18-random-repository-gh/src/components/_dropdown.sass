@@ -1,0 +1,99 @@
+@include b("select")
+    $select_text: null
+    $select_list: null
+    $select_icon: null
+
+    @include e("box")
+        --text-color: #{$heavy_grey}
+        --bg-selectbox: #{$light_grey}
+        --border-color: #{$mid_grey}
+        --border-radius: #{$space_12}
+        --space-x: #{$space_20}
+        --space-y: #{$space_8}
+        --bg-alpha-50: rgb(50 5 102 / 50%)
+        --transition: 230ms ease all
+
+        position: relative
+        width: 100%
+        font-size: calculateRem(14px)
+        font-weight: 600
+        line-height: 32px
+        text-transform: uppercase
+        color: var(--text-color)
+        z-index: 10
+
+    @include e("icon")
+        $select_icon: &
+
+        position: absolute
+        top: 50%
+        right: var(--space-x)
+        transform: translateY(-50%)
+        transition: var(--transition)
+        width: 24px
+        height: 24px
+
+    @include e("input-text")
+        $select_text: &
+
+        display: none
+        width: 100%
+        cursor: pointer
+
+    @include e("input")
+        display: none
+        &:checked + #{$select_text}
+            display: block
+
+    @include e("list")
+        $select_list: &
+
+        position: absolute
+        width: 100%
+        opacity: 0
+        margin-top: #{$space_4}
+        color: #{$heavy_grey}
+        background: #{$light_grey}
+        border-radius: var(--border-radius)
+        border: 1px solid #{$mid_grey}
+        overflow-y: auto
+        max-height: 30vh
+        box-shadow: 8px 8px 20px rgba(38, 38, 38, .38)
+        animation: hide-list 230ms step-start 230ms forwards
+        label
+            position: relative
+            cursor: pointer
+            display: block
+            padding: var(--space-y) var(--space-x)
+            transition: var(--transition)
+            &::after
+                content: "🎯"
+                position: absolute
+                top: 50%
+                right: var(--space-x)
+                display: none
+                transform: translateY(-50%)
+
+            &:hover, &.active
+                background: #{$anti_flash}
+                color: #{$primary_400}
+                &::after
+                    display: block
+
+    @include e("current")
+        padding: var(--space-y) var(--space-x)
+        background: var(--bg-selectbox)
+        border: 1px solid var(--border-color)
+        border-radius: var(--border-radius)
+        cursor: pointer
+        &:focus + #{$select_list}
+            opacity: 1
+            animation: none
+        &:focus #{$select_icon}
+            transform: translateY(-50%) rotate(180deg)
+
+@keyframes hide-list
+    from
+        transform: scaleY(1)
+    to
+        transform: scaleY(0)
