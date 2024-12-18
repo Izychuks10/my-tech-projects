@@ -11,9 +11,9 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 |      | 🌱 Beginner                                                                      |      | 🍃 Intermediate                                                                      |     | 🍁 Advanced                                                             |
 | :--: | :------------------------------------------------------------------------------- | :--: | :----------------------------------------------------------------------------------- | :-: | :---------------------------------------------------------------------- |
 |  🎉  | [Single Page CV][demo-single-page-cv] [[ref][ref-single-page-cv]]                | 🎉⛺ | [Custom Dropdown][demo-custom-dropdown] [[ref][ref-custom-dropdown]]                 | 🚩  | [24hr Story Feature][demo-stories-feature] [[ref][ref-stories-feature]] |
-|  🎉  | [Basic HTML Website][demo-basic-html-website] [[ref][ref-basic-html-website]]    |  🎪  | [Task Tracker][demo-task-tracker-js] [[ref][ref-task-tracker-js]]                    |     |
+|  🎉  | [Basic HTML Website][demo-basic-html-website] [[ref][ref-basic-html-website]]    |  🎉  | [Task Tracker][demo-task-tracker-js] [[ref][ref-task-tracker-js]]                    |     |
 |  🎉  | [Personal Portfolio][demo-personal-portfolio] [[ref][ref-personal-portfolio]]    |  🎉  | [GH Random Repo][demo-github-random-repo] [[ref][ref-github-random-repo]]            |     |
-|  🎉  | [Changelog Component][demo-changelog-component] [[ref][ref-changelog-component]] |  🚩  | [Reddit Client][demo-reddit-client] [[ref][ref-reddit-client]]                       |     |
+|  🎉  | [Changelog Component][demo-changelog-component] [[ref][ref-changelog-component]] |  🎪  | [Reddit Client][demo-reddit-client] [[ref][ref-reddit-client]]                       |     |
 | 🎉⛺ | [Testimonial Cards][demo-testimonial-cards] [[ref][ref-testimonial-cards]]       |  🎉  | [Temperature Convert][demo-temperature-converter] [[ref][ref-temperature-converter]] |     |
 |  🎉  | [Datepicker UI][demo-datepicker-ui] [[ref][ref-datepicker-ui]]                   |  🚩  | [Pomodoro Timer][demo-pomodoro-timer] [[ref][ref-pomodoro-timer]]                    |     |
 |  🎉  | [Accessible Form UI][demo-accessible-form-ui] [[ref][ref-accessible-form-ui]]    |  🚩  | [Quiz App][demo-quiz-app] [[ref][ref-quiz-app]]                                      |     |
@@ -62,7 +62,7 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [ref-custom-dropdown]: https://roadmap.sh/projects/custom-dropdown
 [demo-custom-dropdown]: https://pine1611.github.io/frontend-projects/16-custom-dropdown/public
 [ref-task-tracker-js]: https://roadmap.sh/projects/task-tracker-js
-[demo-task-tracker-js]: https://pine1611.github.io/frontend-projects/
+[demo-task-tracker-js]: https://pine1611.github.io/frontend-projects/17-task-tracker/public
 [ref-github-random-repo]: https://roadmap.sh/projects/github-random-repo
 [demo-github-random-repo]: https://pine1611.github.io/frontend-projects/18-random-repository-gh/public
 [ref-reddit-client]: https://roadmap.sh/projects/reddit-client
