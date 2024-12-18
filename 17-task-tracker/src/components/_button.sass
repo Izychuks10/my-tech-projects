@@ -1,0 +1,40 @@
+@include b("btn")
+    background: #{$light_grey}
+    border: 1px solid transparent
+    border-radius: #{$space_8}
+    padding: #{$space_8} #{$space_12}
+    display: flex
+    align-items: center
+    justify-content: center
+    cursor: pointer
+    transition: 180ms all ease-in-out
+    &:hover
+        background: #{$primary_50}
+        border-color: #{$primary_200}
+
+    @include m("inform")
+        position: absolute
+        right: #{$space_4}
+        top: 50%
+        transform: translateY(-50%)
+
+    @include m("done")
+        background: #{$light_grey}
+        border-color: #{$mid_grey}
+        cursor: help
+        img
+            width: 18px
+            height: 18px
+
+    @include m("update")
+        background: #{$light_grey}
+        border-color: #{$mid_grey}
+        cursor: help
+        img
+            width: 18px
+            height: 18px
+
+    @include b("icon")
+        display: block
+        width: 16px
+        height: 16px

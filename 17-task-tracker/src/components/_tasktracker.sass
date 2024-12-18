@@ -1,0 +1,75 @@
+@include b("tasktrack")
+
+    padding: #{$space_24}
+    border: 1px solid #{$mid_grey}
+    border-radius: #{$space_32}
+
+    h3
+        font-size: calculateRem(18px)
+        line-height: 24px
+        color: #{$black38}
+        text-transform: uppercase
+        margin-bottom: #{$space_24}
+
+    @include e("create")
+        display: flex
+        align-items: center
+        position: relative
+        margin-bottom: #{$space_24}
+
+    @include b("tasklist")
+        margin-bottom: #{$space_20}
+        li
+            display: flex
+            flex-direction: row
+            align-items: center
+            justify-content: space-between
+            gap: #{$space_12}
+            padding: #{$space_8} 0
+            border-bottom: 1px solid #{$light_grey}
+            &:last-child
+                border-bottom: 0
+            @include for-screen("mobile-md", "max-w")
+                flex-direction: column
+                align-items: flex-start
+
+        @include e("title")
+            font-size: calculateRem(14px)
+            line-height: 20px
+            cursor: pointer
+            display: flex
+            align-items: center
+            gap: #{$space_8}
+            max-width: 80%
+            @include for-screen("mobile-md", "max-w")
+                max-width: 100%
+
+        @include e("status")
+            display: block
+            font-size: calculateRem(12px)
+            line-height: 16px
+            padding: #{$space_4} #{$space_8}
+            border-radius: #{$space_4}
+            border: 1px solid transparent
+            min-width: max-content
+            @include m("todo", false)
+                color: #57ab5a
+                background: rgb(70 149 74 / 15%)
+                border-color: rgb(70 149 74 / 38%)
+            @include m("in-progress", false)
+                color: #c69026
+                background: rgb(198 144 38 / 15%)
+                border-color: rgb(198 144 38 / 38%)
+            @include m("done", false)
+                color: #986ee2
+                background: rgb(152 110 226 / 15%)
+                border-color: rgb(152 110 226/ 38%)
+
+        @include e("actions")
+            display: flex
+            flex-direction: row
+            gap: 8px
+            input[name="update"]
+                cursor: pointer
+            input[type="checkbox"]
+                display: none
