@@ -7,6 +7,9 @@
         border: 1px solid #{$light_grey}
         border-radius: #{$space_24}
 
+    @include e("lane-head")
+        margin-bottom: #{$space_20}
+
     @include e("create-block")
         position: relative
         display: none
@@ -32,3 +35,32 @@
         box-shadow: 4px 4px 12px 0 rgba(0, 0, 0, .18)
         @include m("active")
             display: flex
+
+    @include e("post-item")
+        border-bottom: 1px solid #{$light_grey}
+        &:last-child
+            border-bottom: 0
+    @include e("votes")
+        padding: #{$space_8}
+        background: #{$anti_flash}
+        border: 1px solid #{$light_grey}
+    @include e("ups")
+        color: #{$heavy_grey}
+        font-size: calculateRem(14px)
+        line-height: 16px
+        font-weight: 600
+    @include e("title")
+        color: #{$primary_400}
+        transition: 180ms all ease-in-out
+        overflow: hidden
+        text-overflow: ellipsis
+        display: -webkit-box
+        -webkit-line-clamp: 1
+        -webkit-box-orient: vertical
+        &:hover
+            color: #{$primary_300}
+    @include e("author")
+        font-size: calculateRem(12px)
+        line-height: 16px
+        color: #{$heavy_grey}
+        font-style: italic

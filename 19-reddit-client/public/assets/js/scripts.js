@@ -5,20 +5,25 @@ class RedditClient {
             wrap: "flex flex--x al-center space-bet reddit__lane-head",
             title: "reddit__source",
             nav: "reddit__nav",
-            navBtn: "btn btn--none-style nav_btn-js",
-            navAction: "reddit__actions actions-js",
+            navActionBtn: "btn btn--none-style",
+            navActionBlock: "reddit__actions",
             navActive: "reddit__actions--active",
+        },
+        bodyLane: {
+            container: "reddit__lane-body",
+            postsWrap: "reddit__posts",
+            postItem: "flex flex--x flex--x-start gap-2 reddit__post-item",
+            postVote: "flex flex--y al-center reddit__votes",
+            postTitleWrap: "flex flex--y flex--y-end gap-2",
         },
     };
 
     static CONTROL_CLASSES = {
-        addLaneBtn: "reddit_add-js",
         dynamicLane: "reddit_lane-js",
-        actionBlock: "actions-js",
-        navActions: "nav_btn-js",
+        actionBtn: "nav_btn-js",
+        actionBlock: "actions_block-js",
+        postsWrap: "reddit_posts-js",
         refreshLane: "refresh_lane-js",
-        deleteLane: "delete_lane-js",
-        createBlock: "create_block-js",
     };
 
     constructor() {
@@ -35,6 +40,7 @@ class RedditClient {
         this.eventCreate();
     }
 
+    // action control in lane
     createActionsBlock(nameLane) {
         let listAction = document.createElement("div");
         let refreshBtn = document.createElement("button");
@@ -51,7 +57,7 @@ class RedditClient {
         deleteIcon.classList.add("icon");
         deleteBtn.classList = "btn btn--action";
         deleteBtn.setAttribute("target-id", `${nameLane}-${this.countLanes}`);
-        listAction.classList = this.styles.headLane.navAction;
+        listAction.classList.add(...[`${this.styles.headLane.navActionBlock}`, `${this.controls.actionBlock}`]);
 
         // refresh lane
         refreshBtn.addEventListener("click", (event) => {
@@ -74,6 +80,7 @@ class RedditClient {
 
         return listAction;
     }
+    // header navigation lane
     createHeadNav(nameLane) {
         let navLane = document.createElement("div");
         let btnNav = document.createElement("button");
@@ -82,9 +89,13 @@ class RedditClient {
         // setup nav button
         imgBtn.src = "assets/images/nav.svg";
         imgBtn.classList.add("icon");
-        btnNav.classList = this.styles.headLane.navBtn;
+
+        btnNav.classList = this.styles.headLane.navActionBtn; // change
+        btnNav.classList.add(this.controls.actionBtn);
+
         navLane.classList.add(this.styles.headLane.nav);
 
+        // add event for button navigation
         btnNav.addEventListener("click", (event) => {
             let action = btnNav.nextElementSibling;
             action.classList.toggle(this.styles.headLane.navActive);
@@ -98,7 +109,7 @@ class RedditClient {
 
         return navLane;
     }
-    // create headlane
+    // create header lane
     createHeadLane(nameLane) {
         let headLane = document.createElement("div");
         let titleLane = document.createElement("code");
@@ -115,8 +126,65 @@ class RedditClient {
 
         return headLane;
     }
+
+    // post item
+    createPostItem({ title, author, permalink, ups }) {
+        let postItem = document.createElement("div");
+        postItem.classList = this.styles.bodyLane.postItem;
+
+        // post vote
+        let postVote = document.createElement("div");
+        let voteIcon = document.createElement("img");
+        let voteCount = document.createElement("span");
+        let voteText = document.createTextNode(ups);
+        postVote.classList = this.styles.bodyLane.postVote;
+        voteIcon.src = "assets/images/cheron-up.svg";
+        voteIcon.classList.add("icon");
+        voteCount.classList.add("reddit__ups");
+
+        voteCount.appendChild(voteText);
+        postVote.appendChild(voteIcon);
+        postVote.appendChild(voteCount);
+
+        // post title
+        let postTitleWrap = document.createElement("div");
+        postTitleWrap.classList = this.styles.bodyLane.postTitleWrap;
+        let postTitle = document.createElement("a");
+        let titleText = document.createTextNode(title);
+        postTitle.href = `${permalink}`;
+        postTitle.target = "_blank";
+        postTitle.classList.add("reddit__title");
+        postTitle.appendChild(titleText);
+        let authorWrap = document.createElement("span");
+        let authorText = document.createTextNode(author);
+        authorWrap.classList.add("reddit__author");
+        authorWrap.appendChild(authorText);
+        postTitleWrap.appendChild(postTitle);
+        postTitleWrap.appendChild(authorWrap);
+
+        postItem.appendChild(postVote);
+        postItem.appendChild(postTitleWrap);
+
+        return postItem;
+    }
+    // body
+    createBodyLane() {
+        let postsWrap = document.createElement("div");
+
+        let postItem = this.createPostItem({
+            title: "let try make another title with    more spaces    ",
+            author: "iampine",
+            permalink: "local",
+            ups: "23.6599",
+        });
+
+        postsWrap.appendChild(postItem);
+
+        return postsWrap;
+    }
+
     // create new lane node
-    createReadditLane({ name }) {
+    createRedditLane({ name }) {
         let laneWrap = document.createElement("div");
         laneWrap.classList = this.styles.wrap;
         this.countLanes++;
@@ -130,6 +198,8 @@ class RedditClient {
         /**
          * after add head call fetch data here
          */
+        let lanePosts = this.createBodyLane();
+        laneWrap.appendChild(lanePosts);
 
         return laneWrap;
     }
@@ -160,7 +230,13 @@ class RedditClient {
             msgError.innerHTML = "";
             this.inputLaneTitle.classList.remove("form__error");
             const redditLane = document.getElementById(this.controls.dynamicLane);
-            const laneWrap = this.createReadditLane({ name: this.inputLaneTitle.value });
+
+            // format string name
+            let nameLane = this.inputLaneTitle.value;
+            nameLane = nameLane.replace(/ /g, "");
+            // begin create lane
+            const laneWrap = this.createRedditLane({ name: nameLane });
+
             // add before last lane
             redditLane.insertBefore(laneWrap, this.btnShowFormAdd.parentElement);
 
@@ -178,7 +254,7 @@ class RedditClient {
 
         document.addEventListener("click", (event) => {
             const isButtonOrNav =
-                event.target.closest(`.${this.controls.navActions}`) ||
+                event.target.closest(`.${this.controls.actionBtn}`) ||
                 event.target.closest(`.${this.controls.actionBlock}`);
             if (!isButtonOrNav) {
                 actions.forEach((item) => {
