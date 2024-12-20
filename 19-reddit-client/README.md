@@ -9,6 +9,10 @@ Project based on [Reddit Client][reddit-client] from [Roadmap Ideas Frontend Pro
 -   **Status**: DONE 🎉
 -   **Demo**: [here][demo-link] 🚀
 
+## Notes
+
+> At this time, I am not done with small problem: when sub reddit post not found or doesn't exit, still add new lane. Current I want to if not found or doesn't exit, will not add new lane. Will complete this problem soon.
+
 ## License
 
 This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT).

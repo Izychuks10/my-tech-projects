@@ -12,8 +12,8 @@ class RedditClient {
         bodyLane: {
             container: "reddit__lane-body",
             postsWrap: "reddit__posts",
-            postItem: "flex flex--x flex--x-start gap-2 reddit__post-item",
-            postVote: "flex flex--y al-center reddit__votes",
+            postItem: "flex flex--x flex--x-start space-bet gap-2 reddit__post-item",
+            postVote: "flex flex--y flex--center reddit__votes",
             postTitleWrap: "flex flex--y flex--y-end gap-2",
         },
     };
@@ -35,6 +35,11 @@ class RedditClient {
         this.formAddLane = document.getElementById("formAddLane-js");
         this.btnAddLane = document.getElementById("addLane-js");
         this.inputLaneTitle = document.getElementById("laneTitle-js");
+
+        this.resultFetchData = {
+            data: null,
+            isError: false,
+        };
 
         this.showLaneController();
         this.eventCreate();
@@ -69,7 +74,6 @@ class RedditClient {
         deleteBtn.addEventListener("click", (event) => {
             let targerID = deleteBtn.getAttribute("target-id");
             const laneWrap = document.getElementById(targerID);
-            console.log(laneWrap);
             laneWrap.remove();
         });
 
@@ -151,7 +155,7 @@ class RedditClient {
         postTitleWrap.classList = this.styles.bodyLane.postTitleWrap;
         let postTitle = document.createElement("a");
         let titleText = document.createTextNode(title);
-        postTitle.href = `${permalink}`;
+        postTitle.href = `https://www.reddit.com/r${permalink}`;
         postTitle.target = "_blank";
         postTitle.classList.add("reddit__title");
         postTitle.appendChild(titleText);
@@ -168,17 +172,36 @@ class RedditClient {
         return postItem;
     }
     // body
-    createBodyLane() {
+    createBodyLane({ subreddits }) {
         let postsWrap = document.createElement("div");
+        postsWrap.classList.add(this.styles.bodyLane.postsWrap);
+        postsWrap.innerHTML = "Loading data";
 
-        let postItem = this.createPostItem({
-            title: "let try make another title with    more spaces    ",
-            author: "iampine",
-            permalink: "local",
-            ups: "23.6599",
-        });
+        // fetch data
+        this.fetchData({ url: `https://www.reddit.com/r/${subreddits}.json` })
+            .then((results) => {
+                if (!results.isError.status) {
+                    postsWrap.innerHTML = "";
+                    let dataPosts = results.data.data.children;
 
-        postsWrap.appendChild(postItem);
+                    dataPosts.forEach((post) => {
+                        let postItem = this.createPostItem({
+                            title: post.data.title,
+                            author: post.data.author,
+                            permalink: post.data.permalink,
+                            ups: post.data.ups,
+                        });
+                        postsWrap.appendChild(postItem);
+                    });
+                } else {
+                    postsWrap.innerHTML =
+                        "Something wrong with sub reddits title you want to see! Please enter a meaningful subject, not a meaningless string of characters.";
+                }
+            })
+            .catch((error) => {
+                console.log(`error: ${error}`);
+                postsWrap.innerHTML = "No sub reddit found!";
+            });
 
         return postsWrap;
     }
@@ -198,7 +221,8 @@ class RedditClient {
         /**
          * after add head call fetch data here
          */
-        let lanePosts = this.createBodyLane();
+        let lanePosts = this.createBodyLane({ subreddits: name });
+
         laneWrap.appendChild(lanePosts);
 
         return laneWrap;
@@ -223,7 +247,7 @@ class RedditClient {
     createNewLane() {
         let msgError = document.querySelector(".error_msg-js");
         if (this.inputLaneTitle.value == "") {
-            msgError.innerHTML = "Please enter title of task!";
+            msgError.innerHTML = "Please enter sub reddit title!";
             msgError.classList.add("form__error-msg--show");
             this.inputLaneTitle.classList.add("form__error");
         } else {
@@ -237,8 +261,14 @@ class RedditClient {
             // begin create lane
             const laneWrap = this.createRedditLane({ name: nameLane });
 
-            // add before last lane
-            redditLane.insertBefore(laneWrap, this.btnShowFormAdd.parentElement);
+            // add to last lane before form add
+            // redditLane.insertBefore(laneWrap, this.btnShowFormAdd.parentElement);
+            /**
+             * the requirement at roadmap.sh, it should be add at the last lane but
+             * think should add at the end of lane rather than at before last lane,
+             * so user can be convenient when add more => no need scroll down
+             */
+            redditLane.appendChild(laneWrap);
 
             // reset form
             this.formAddLane.classList.remove("reddit__create-block--active");
@@ -262,6 +292,23 @@ class RedditClient {
                 });
             }
         });
+    }
+
+    async fetchData({ url }) {
+        let results = {
+            data: null,
+            isError: { status: false, error: null },
+        };
+
+        try {
+            const response = await fetch(url);
+            const dataFetch = await response.json();
+            results.data = dataFetch;
+        } catch (error) {
+            results.isError.status = true;
+            results.isError.error = error;
+        }
+        return results;
     }
 }
 
