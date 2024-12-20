@@ -155,7 +155,7 @@ class RedditClient {
         postTitleWrap.classList = this.styles.bodyLane.postTitleWrap;
         let postTitle = document.createElement("a");
         let titleText = document.createTextNode(title);
-        postTitle.href = `https://www.reddit.com/r${permalink}`;
+        postTitle.href = `https://www.reddit.com${permalink}`;
         postTitle.target = "_blank";
         postTitle.classList.add("reddit__title");
         postTitle.appendChild(titleText);
