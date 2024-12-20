@@ -1,0 +1,23 @@
+@include b("quizza")
+
+    --border-radius: #{$space_8}
+    --min-height-content: #{calculateRem(320px)}
+    --pad-box: #{$space_8}
+    --pad-content: #{$space_12} #{$space_20}
+
+    @include e("box")
+        padding: var(--pad-box)
+        background: #{$anti_flash}
+        border: 1px solid #{$light_grey}
+        border-radius: var(--border-radius)
+
+    @include e("content")
+        min-height: calculateRem(200px)
+        padding: var(--pad-content)
+        background: #{$light_grey}
+        border-radius: var(--border-radius)
+
+    @include e("nav")
+        padding: var(--pad-box)
+        background: #{$light_grey}
+        border-radius: var(--border-radius)
