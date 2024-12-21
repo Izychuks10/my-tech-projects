@@ -65,23 +65,24 @@
         <section class="flex  flex--center quizza">
 
             <div class="basis-md-8 basis-sm-8 basis-12 flex flex--y gap-3 quizza__box">
-                <!-- progress show up after start-->
-                <div class="progress progress-js" data-speed="12">
-                    <div class="progress__bar progressBar-js"></div>
-                    <div class="progress__percent progressPercent-js">20%</div>
-                    <div class="progress__steps progressSteps-js">1/5</div>
+                <div class="progress" data-speed="12" id="progress-js">
+                    <div class="progress__bar progress_target-js" target-id="bar"></div>
+                    <div class="progress__percent progress_target-js" target-id="percent"></div>
+                    <div class="progress__steps progress_target-js" target-id="steps"></div>
                 </div>
 
-                <div class="quizza__content">
-                    <div class="quizza__question" id="question-js">
+                <div class="flex flex--y flex--center gap-2 quizza__content">
+                    <div class="text__center quizza__question" id="question-js">
                         This is short quiz to test knowledge about JS. Do you want to try it?
                     </div>
-                    <div class="quizza__options" id="options-js"></div>
+                    <div class="flex flex--x flex--wrap flex--center gap-3 quizza__options" id="options-js">
+                    </div>
+                    <div id="timer-js"></div>
                 </div>
 
                 <div class="flex flex--x al-center space-bet quizza__nav" id="quizza_nav-js">
                     <button class="btn btn-js" target-action="start" id="startBtn-js">Start</button>
-                    <div class="quizza__score" id="score-js">0/100</div>
+                    <div class="quizza__score" id="score-js"></div>
                     <button class="btn btn-js" target-action="answer" target-id="1" id="answerBtn-js"
                         disabled>Answer</button>
                 </div>
