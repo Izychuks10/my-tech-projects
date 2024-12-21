@@ -23,4 +23,4 @@ Happy Coding!
 
 [roadmap-frontend-projects]: https://roadmap.sh/frontend/projects
 [quiz-app]: https://roadmap.sh/projects/quiz-app
-[demo-link]: https://pine1611.github.io/frontend-projects/15-quiz-app/public
+[demo-link]: https://pine1611.github.io/frontend-projects/22-quiz-app/public
