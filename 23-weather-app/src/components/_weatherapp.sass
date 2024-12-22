@@ -1,0 +1,39 @@
+@include b("wwa")
+    --border-radius-all: #{$space_8}
+    --pad-all: #{$space_12}
+
+    padding: var(--pad-all)
+    border: 1px solid #{$light_grey}
+    border-radius: var(--border-radius-all)
+
+    @include e("area")
+        padding: #{$space_20} var(--pad-all)
+        background: #{$light_grey}
+        border-radius: var(--border-radius-all)
+
+    @include e("cityname")
+        font-size: calculateRem(18px)
+        line-height: 24px
+        // color: #{$black38}
+        text-transform: uppercase
+        letter-spacing: 2px
+
+    @include e("time")
+        font-size: calculateRem(14px)
+        line-height: 20px
+        // color: #{$black38}
+        span
+            font-size: calculateRem(12px)
+            color: #{$heavy_grey}
+
+    @include e("temperature")
+        font-size: calculateRem(32px)
+        color: #{$primary_300}
+
+    @include e("extras")
+        font-size: calculateRem(14px)
+        line-height: 14px
+        color: #5a5d60
+        span
+            font-size: calculateRem(12px)
+            color: #8a8c8e
