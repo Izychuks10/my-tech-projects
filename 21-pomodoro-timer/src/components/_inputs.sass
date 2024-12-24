@@ -1,0 +1,43 @@
+@include b("form")
+
+    @include e("wrap")
+        width: auto
+        position: relative
+
+    @include e("input")
+        width: 100%
+        padding: #{$space_12} #{$space_16}
+        outline: none
+        border: 1px solid #{$mid_grey}
+        background: #{$anti_flash}
+        border-radius: #{$space_8}
+        font-size: calculateRem(14px)
+        color: var(--global-text-color)
+
+    @include e("error")
+        border: 1px solid #{$primary_600}
+    @include e("error-msg")
+        position: absolute
+        display: block
+        bottom: -24px
+        font-size: calculateRem(12px)
+        font-style: italic
+        font-weight: 300
+        color: #{$primary_600}
+        transform: rotateX(90deg)
+        transition: 180ms all ease-in-out
+        @include m("show")
+            transform: rotateX(0)
+            animation: 230ms ease hide-error-msg
+
+@keyframes hide-error-msg
+    0%
+        transform: rotateX(90deg)
+    100%
+        transform: rotateX(0)
+
+::placeholder
+    color: #{$mid_grey}
+    opacity: 1
+::-ms-input-placeholder
+    color: #{$mid_grey}
