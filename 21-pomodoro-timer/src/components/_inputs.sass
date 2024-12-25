@@ -1,15 +1,15 @@
 @include b("form")
 
     @include e("wrap")
-        width: auto
+        width: 100%
         position: relative
 
     @include e("input")
         width: 100%
-        padding: #{$space_12} #{$space_16}
+        padding: #{$space_12} calc( #{$space_24} * 2 ) #{$space_12} #{$space_16}
         outline: none
-        border: 1px solid #{$mid_grey}
-        background: #{$anti_flash}
+        border: 1px solid #{$light_dark}
+        background: #{$mid_dark}
         border-radius: #{$space_8}
         font-size: calculateRem(14px)
         color: var(--global-text-color)
@@ -37,7 +37,7 @@
         transform: rotateX(0)
 
 ::placeholder
-    color: #{$mid_grey}
+    color: #{$light_dark}
     opacity: 1
 ::-ms-input-placeholder
-    color: #{$mid_grey}
+    color: #{$light_dark}

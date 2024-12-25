@@ -6,6 +6,9 @@ $black28: #282828
 $light_grey: #f1f2f6
 $mid_grey: #d9e0e8
 $heavy_grey: #6a6e72
+$light_dark: #33343a
+$mid_dark: #181818
+$heavy_dark: #0f0f0f
 
 $primary_50: #fef2f2
 $primary_100: #ffe1e1
@@ -33,9 +36,6 @@ $space_28: calculateRem(28px)
 $space_32: calculateRem(32px)
 $space_68: calculateRem(68px)
 
-// bg image
-$bgImageRadio: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ffa2a2'/%3e%3c/svg%3e")
-
 \:root
     --anti-flash: #{$anti_flash}
     --light-grey: #{$light_grey}
@@ -47,4 +47,4 @@ $bgImageRadio: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'
     --global-bg: #{$anti_flash}
     --global-text-color: #{$heavy_grey}
 
-    --bg-image-radio: #{$bgImageRadio}
+    --global-space-left-nav: #{calculateRem(38px)}

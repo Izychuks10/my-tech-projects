@@ -1,1 +1,63 @@
+@include b("pomodoro")
+    $pomodoroMain: null
 
+    --pad-all: #{$space_16}
+    --border-radius-all: #{$space_16}
+    --border-color: #{$light_dark}
+    --background-box: #{$mid_dark}
+
+    // width: 100vw
+    // height: calc( 100vh - var(--global-space-left-nav) )
+    background: #{$heavy_dark}
+    @include e("main")
+        $pomodoroMain: &
+
+        margin-left: var(--global-space-left-nav)
+        padding: #{$space_12}
+        height: calc( 100vh - var(--global-space-left-nav) )
+        @include for-screen("tablet", "max-w")
+            flex-wrap: wrap-reverse
+        @include for-screen("mobile-md", "max-w")
+            margin-left: 0
+    @include e("box")
+        background: var(--background-box)
+        padding: var(--pad-all)
+        border: 1px solid var(--border-color)
+        border-radius: var(--border-radius-all)
+
+    @include e("top-bar")
+        background: var(--background-box)
+        border-bottom: 1px solid var(--border-color)
+        font-size: #{calculateRem(12px)}
+        height: var(--global-space-left-nav)
+
+    @include e("datetime")
+        padding: 0 #{$space_16}
+
+    @include e("nav-logo")
+        width: var(--global-space-left-nav)
+        height: var(--global-space-left-nav)
+        display: flex
+        align-items: center
+        justify-content: center
+        border-right: 1px solid var(--border-color)
+
+    @include e("nav-sidebar")
+        width: var(--global-space-left-nav)
+        position: fixed
+        top: var(--global-space-left-nav)
+        left: 0
+        bottom: 0
+        background: var(--background-box)
+        border-right: 1px solid var(--border-color)
+        @include for-screen("mobile-md", "max-w")
+            display: none
+
+    @include e("sidebar")
+
+    @include e("content")
+
+    @include e("counter")
+        color: #{$light_grey}
+        font-size: calculateRem(100px)
+        padding: #{$space_20}

@@ -2,11 +2,11 @@
 
     outline: none
     cursor: pointer
-    padding: #{$space_12} #{$space_16}
-    background: #{$light_grey}
-    border: 1px solid #{$mid_grey}
+    padding: #{$space_8} #{$space_16}
+    background: #{$light_dark}
+    border: 1px solid #{$mid_dark}
     border-radius: #{$space_8}
-    color: #{$heavy_grey}
+    color: #{$mid_grey}
     font-size: calculateRem(13px)
     transition: 180ms all ease-in
     &:hover
@@ -17,3 +17,30 @@
         background: #{$light_grey}
         color: #{$mid_grey}
         border-color: #{$mid_grey}
+
+    @include m("inform")
+        position: absolute
+        right: #{$space_4}
+        top: 50%
+        transform: translateY(-50%)
+
+    @include m("done")
+        background: #{$light_grey}
+        border-color: #{$mid_grey}
+        cursor: help
+        img
+            width: 18px
+            height: 18px
+
+    @include m("update")
+        background: #{$light_grey}
+        border-color: #{$mid_grey}
+        cursor: help
+        img
+            width: 18px
+            height: 18px
+
+    @include b("icon")
+        display: block
+        width: 16px
+        height: 16px

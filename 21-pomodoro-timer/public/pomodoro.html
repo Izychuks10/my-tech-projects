@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+
+    <title>Pomodoro Timer - You've ripped a hole in the fabric of the internet. Love, from Pine!</title>
+
+    <meta name="description"
+        content="A productivity tool based on the Pomodoro Technique. The twenty-one project based on roadmap.sh" />
+    <meta name="keywords"
+        content="design, html, sass/css, responsive, template, javascript, pomodoro timer app, api, productivity tool" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="author" content="Pine!" />
+    <meta property="og:site_name" content="Pomodoro Timer" />
+    <meta property="og:title"
+        content="Pomodoro Timer - You've ripped a hole in the fabric of the internet. Love, from Pine!" />
+    <meta property="og:description"
+        content="A productivity tool based on the Pomodoro Technique. The twenty-one project based on roadmap.sh" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../../global_assets/images/logo.svg" />
+    <meta property="og:url" content="https://github.com/Pine1611" />
+
+    <link rel="icon" type="favicon" href="../../global_assets/images/fav-ico.gif" />
+
+    <link rel="stylesheet" href="assets/css/main.module.min.css" />
+</head>
+
+<body class="pomodoro">
+
+    <div class="flex flex--x flex--nowrap space-bet al-center pomodoro__top-bar">
+        <div class="pomodoro__nav">
+            <a class="pomodoro__nav-logo" href="index.html"><img class="iap" src="assets/images/iap-white.svg" /></a>
+        </div>
+        <div class="flex flex--x flex--nowrap al-center gap-2 pomodoro__datetime">
+            <div class="current-date">Dec 24, 2024</div>
+            <div class="current-time">08:00</div>
+        </div>
+    </div>
+
+    <div class="flex flex--y al-center gap-2 pomodoro__nav-sidebar">
+        <a class="nav-sidebar__item">🍅</a>
+        <a class="nav-sidebar__item">
+            <img width="20" height="20" src="assets/images/setting.svg" />
+        </a>
+    </div>
+
+    <div class="flex flex--x gap-3 pomodoro__main">
+
+        <div class="basis-md-5 basis-12 pomodoro__box pomodoro__sidebar tasktrack">
+            <div class="tasktrack__create">
+                <div class="form__wrap">
+                    <input class="form__input" type="text" name="tasktitle" id="inputTitle-js"
+                        placeholder="What do you need to-do today?" required />
+
+                    <span class="form__error-msg error_msg-js"></span>
+                </div>
+
+                <button class="btn btn--inform" id="btnInsert-js">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#f43f3f">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499" />
+                    </svg>
+                </button>
+            </div>
+
+            <ul class="tasklist" id="tasklist-js">
+                <!-- dynamic load tasks here -->
+            </ul>
+        </div>
+
+        <div class="basis-md-7 basis-12 flex flex--y flex--center pomodoro__box pomodoro__content">
+            <div class="nav__focus-time">
+                <ul class="flex flex--x gap-2">
+                    <li><button class="btn btnTargetTimer-js" target-timer="focusTime">Focus Timer</button></li>
+                    <li><button class="btn btnTargetTimer-js" target-timer="shortBreak">short break</button></li>
+                    <li><button class="btn btnTargetTimer-js" target-timer="longBreak">long break</button></li>
+                </ul>
+            </div>
+            <div class="flex flex--y flex--center">
+                <span class="pomodoro__counter" id="focusTimer-js">25:00</span>
+                <div class="focus__controls">
+                    <button class="btn btnControlTimer-js" target-control="start">Start</button>
+                    <button class="btn btnControlTimer-js" target-control="pause">Pause</button>
+                    <button class="btn btnControlTimer-js" target-control="resume">Resume</button>
+                    <button class="btn btnControlTimer-js" target-control="reset">Reset</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>

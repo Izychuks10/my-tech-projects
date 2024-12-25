@@ -6,6 +6,11 @@ body
     font-weight: 400
     font-style: normal
 
+@include b("iap")
+    width: calculateRem(26px)
+    height: calculateRem(28px)
+    display: block
+
 @include b("text")
     @include e("center")
         text-align: center
