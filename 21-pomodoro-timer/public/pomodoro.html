@@ -41,6 +41,7 @@
     </div>
 
     <div class="flex flex--y al-center gap-2 pomodoro__nav-sidebar">
+        <a><img class="icon" src="assets/images/light-bulb.svg" /></a>
         <a class="nav-sidebar__item">🍅</a>
         <a class="nav-sidebar__item">
             <img width="20" height="20" src="assets/images/setting.svg" />
@@ -70,10 +71,14 @@
             <ul class="tasklist" id="tasklist-js">
                 <!-- dynamic load tasks here -->
             </ul>
+
+            <div class="tasktrack__alert" id="alertMsg-js">
+
+            </div>
         </div>
 
         <div class="basis-md-7 basis-12 flex flex--y flex--center pomodoro__box pomodoro__content">
-            <div class="nav__focus-time">
+            <div class="flex flex--x gap-2 nav__focus-time" id="focusControls-js">
                 <ul class="flex flex--x gap-2">
                     <li><button class="btn btnTargetTimer-js" target-timer="focusTime">Focus Timer</button></li>
                     <li><button class="btn btnTargetTimer-js" target-timer="shortBreak">short break</button></li>

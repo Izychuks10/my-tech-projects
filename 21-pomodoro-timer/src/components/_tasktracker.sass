@@ -3,6 +3,7 @@
     padding: #{$space_24}
     border: 1px solid #{$light_dark}
     border-radius: #{$space_16}
+    position: relative
 
     @include e("create")
         display: flex
@@ -29,10 +30,8 @@
                 align-items: flex-start
 
         @include e("title")
-            // color: #{$heavy_grey}
             font-size: calculateRem(14px)
             line-height: 20px
-            cursor: pointer
             display: flex
             align-items: center
             gap: #{$space_8}
@@ -69,3 +68,14 @@
                 cursor: pointer
             input[type="checkbox"]
                 display: none
+    @include e("alert")
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        min-height: calculateRem(50px)
+        padding: #{$space_12}
+        text-align: center
+        border-top: 1px solid #{$light_dark}
+        font-size: calculateRem(12px)
+        line-height: 14px

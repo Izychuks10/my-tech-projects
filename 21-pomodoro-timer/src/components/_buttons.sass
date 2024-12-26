@@ -2,7 +2,7 @@
 
     outline: none
     cursor: pointer
-    padding: #{$space_8} #{$space_16}
+    padding: calculateRem(6px)
     background: #{$light_dark}
     border: 1px solid #{$mid_dark}
     border-radius: #{$space_8}
@@ -12,35 +12,38 @@
     &:hover
         color: #{$black38}
         background: #{$anti_flash}
-    &:disabled
-        cursor: not-allowed
-        background: #{$light_grey}
-        color: #{$mid_grey}
-        border-color: #{$mid_grey}
+    &:disabled, &.disabled
+        cursor: not-allowed !important
+        color: #{$mid_grey} !important
+        background: #{$mid_dark} !important
+        border-color: #{$light_dark} !important
+    img.icon
+        width: 18px
+        height: 18px
 
     @include m("inform")
+        padding: #{$space_8} #{$space_16}
         position: absolute
         right: #{$space_4}
         top: 50%
         transform: translateY(-50%)
 
+    @include m("todo")
+        // color: #57ab5a
+        background: rgb(70 149 74 / 15%)
+        border-color: rgb(70 149 74 / 38%)
+
+    @include m("inprogress")
+        // color: #c69026
+        background: rgb(198 144 38 / 15%)
+        border-color: rgb(198 144 38 / 38%)
+
+    @include m("setdone")
+        background: rgb(152 110 226 / 15%)
+        border-color: rgb(152 110 226/ 38%)
+        cursor: pointer
+
     @include m("done")
-        background: #{$light_grey}
-        border-color: #{$mid_grey}
+        background: rgb(152 110 226 / 15%)
+        border-color: rgb(152 110 226/ 38%)
         cursor: help
-        img
-            width: 18px
-            height: 18px
-
-    @include m("update")
-        background: #{$light_grey}
-        border-color: #{$mid_grey}
-        cursor: help
-        img
-            width: 18px
-            height: 18px
-
-    @include b("icon")
-        display: block
-        width: 16px
-        height: 16px
