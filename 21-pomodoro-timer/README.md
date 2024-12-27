@@ -23,4 +23,4 @@ Happy Coding!
 
 [roadmap-frontend-projects]: https://roadmap.sh/frontend/projects
 [pomodoro-timer]: https://roadmap.sh/projects/pomodoro-timer
-[demo-link]: https://pine1611.github.io/frontend-projects/21-pomodoro-timer/public
+[demo-link]: https://pine1611.github.io/frontend-projects/21-pomodoro-timer/public/pomodoro.html

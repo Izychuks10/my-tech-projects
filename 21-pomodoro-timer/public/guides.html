@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+
+    <title>Pomodoro Timer Guides - You've ripped a hole in the fabric of the internet. Love, from Pine!</title>
+
+    <meta name="description"
+        content="A productivity tool based on the Pomodoro Technique. The twenty-one project based on roadmap.sh" />
+    <meta name="keywords"
+        content="design, html, sass/css, responsive, template, javascript, pomodoro timer app, api, productivity tool" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="author" content="Pine!" />
+    <meta property="og:site_name" content="Pomodoro Timer" />
+    <meta property="og:title"
+        content="Pomodoro Timer Guides - You've ripped a hole in the fabric of the internet. Love, from Pine!" />
+    <meta property="og:description"
+        content="A productivity tool based on the Pomodoro Technique. The twenty-one project based on roadmap.sh" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../../global_assets/images/logo.svg" />
+    <meta property="og:url" content="https://github.com/Pine1611" />
+
+    <link rel="icon" type="favicon" href="../../global_assets/images/fav-ico.gif" />
+
+    <link rel="stylesheet" href="assets/css/main.module.min.css" />
+</head>
+
+<body class="pomodoro">
+
+    <div class="flex flex--x flex--nowrap al-center pomodoro__topbar">
+        <div class="pomodoro__logo">
+            <a href="index.html"><img class="iap" src="assets/images/iap-white.svg" /></a>
+        </div>
+
+        <div class="flex flex--x flex--nowrap space-bet al-center gap-2 pomodoro__topbar--main">
+            <div class="flex flex--x al-center pomodoro__nav">
+                <a class="pomodoro__nav-item" href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                </a>
+                <a class="pomodoro__nav-item" href="pomodoro.html">🍅</a>
+                <a class="pomodoro__nav-item active" href="guides.html">
+                    <img class="icon" src="assets/images/light-bulb.svg" />
+                </a>
+            </div>
+            <div class="flex flex--x flex--nowrap al-center gap-2 pomodoro__datetime">
+                <a href="#">
+                    <img class="icon" src="assets/images/setting.svg" />
+                </a>
+                <div class="current-date" id="currentDatetime-js">Dec 24, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pomodoro__main">
+
+        <div class="pomodoro__box guides">
+            <h1>Pomodoro Technique</h1>
+            <h3>What is Pomodoro Technique?</h3>
+            <p>
+                The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s.
+                It uses a kitchen timer to break work into intervals, typically 25 minutes in length, separated by
+                short breaks. Each interval is known as a pomodoro, from the Italian word for tomato, after the
+                tomato-shaped kitchen timer Cirillo used as a university student.
+            </p>
+            <br>
+            <h4>Here is steps you can starting with my web app timer base on Pomodoro Technique!</h4>
+            <ul class="guides__list">
+                <li><span>1.</span> Create and pick a task you want to focus on.</li>
+                <li><span>2.</span> Start a timer focus for 25 minutes and get to work.</li>
+                <li><span>3.</span> When the alarm sound on, record the session task with a tick in your list tasks. And
+                    take a short 5 minutes break.</li>
+                <li><span>4.</span> Repeat.</li>
+                <li><span>5.</span> After four sessions, take a long break: 15 minutes and repeat again.</li>
+            </ul>
+            <div class="scroll-x">
+                <table class="guides__table">
+                    <thead>
+                        <tr>
+                            <td>Focus</td>
+                            <td>Short Break</td>
+                            <td>Focus</td>
+                            <td>Short Break</td>
+                            <td>Focus</td>
+                            <td>Short Break</td>
+                            <td>Focus</td>
+                            <td>Long Break</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25'</td>
+                            <td>5'</td>
+                            <td>25'</td>
+                            <td>5'</td>
+                            <td>25'</td>
+                            <td>5'</td>
+                            <td>25'</td>
+                            <td>15'</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        let currentDatetime = document.getElementById("currentDatetime-js");
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const optionDateformat = {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        };
+        const dateFormat = new Intl.DateTimeFormat("en-US", optionDateformat);
+        currentDatetime.innerHTML = `${dateFormat.format(now)} - ${hours}:${minutes}`
+    </script>
+
+</body>
+
+</html>

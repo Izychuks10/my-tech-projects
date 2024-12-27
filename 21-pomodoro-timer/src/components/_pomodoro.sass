@@ -67,3 +67,43 @@
         padding: #{$space_20}
         @include for-screen("mobile-md", "max-w")
             font-size: calculateRem(75px)
+
+@include b("guides")
+    width: 80%
+    margin: 0 auto
+    padding: #{$space_20}
+    @include for-screen("mobile-md", "max-w")
+        width: 100%
+    @include e("list")
+        font-size: calculateRem(15px)
+        color: #{$mid_grey}
+        margin-bottom: #{$space_20}
+        span
+            color: #{$heavy_grey}
+            font-size: calculateRem(13px)
+    @include e("table")
+        border: 1px solid var(--border-color)
+        text-align: center
+        width: 100%
+        margin-bottom: #{$space_20}
+        @include for-screen("mobile-md", "max-w")
+            width: max-content
+        td
+            border-right: 1px solid var(--border-color)
+            border-bottom: 1px solid var(--border-color)
+            padding: #{$space_4}
+            font-size: calculateRem(14px)
+            &:nth-child(2n-1)
+                background: #{$heavy_dark}
+        thead td
+                font-size: calculateRem(13px)
+                &:nth-child(2n-1)
+                    color: #{$light_grey}
+        tbody td
+                &:nth-child(2n)
+                    color: #c69026
+                &:nth-child(2n+1)
+                    color: #57ab5a
+
+@include b("scroll-x")
+    overflow-x: scroll

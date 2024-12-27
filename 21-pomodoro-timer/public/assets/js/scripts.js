@@ -25,8 +25,8 @@ class PomorodoApp {
         // pomodoro initial
         this.timerContainer = document.getElementById(this.controls.timerContainer); // timer container
         this.focusTime = 25;
-        this.shortBreak = 1 / 4;
-        this.longBreak = 5;
+        this.shortBreak = 5;
+        this.longBreak = 15;
 
         this.currentActiveTimer = this.focusTime;
         this.timeIntervalID;
@@ -34,6 +34,7 @@ class PomorodoApp {
         this.isPaused = false; // use for check pause and resume timer
         this.isActiveTimer = false; // use for check inactive timer focus
 
+        this.getCurrentDatetime();
         this.initFocusControls();
         this.initActionControls();
 
@@ -274,6 +275,20 @@ class PomorodoApp {
             }
         }, 1000);
     }
+    getCurrentDatetime() {
+        let currentDatetime = document.getElementById("currentDatetime-js");
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const optionDateformat = {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+        };
+        const dateFormat = new Intl.DateTimeFormat("en-US", optionDateformat);
+        currentDatetime.innerHTML = `${dateFormat.format(now)} - ${hours}:${minutes}`;
+    }
     // play sound
     playTingTing() {
         let audioContainer = document.createElement("audio");
@@ -325,40 +340,7 @@ class PomorodoApp {
 }
 
 class TaskTracker {
-    static DATA_TRACKER = [
-        {
-            id: 1,
-            title: "Build frontend for Task tracker CLI",
-            status: "todo",
-            sessionWork: 2,
-            createdAt: "12/4/2024, 8:48:29 AM",
-            updatedAt: "12/4/2024, 8:48:29 AM",
-        },
-        {
-            id: 2,
-            title: "Try to finish FE - Intermediate before Dec 28, 2024",
-            status: "in-progress",
-            sessionWork: 3,
-            createdAt: "12/4/2024, 8:48:29 AM",
-            updatedAt: "12/4/2024, 8:48:29 AM",
-        },
-        {
-            id: 3,
-            title: "All beginer projects",
-            status: "done",
-            sessionWork: 2,
-            createdAt: "12/4/2024, 8:48:29 AM",
-            updatedAt: "12/4/2024, 8:48:29 AM",
-        },
-        {
-            id: 4,
-            title: "Lorem isum dolor set amit",
-            status: "todo",
-            sessionWork: 1,
-            createdAt: "12/4/2024, 8:48:29 AM",
-            updatedAt: "12/4/2024, 8:48:29 AM",
-        },
-    ];
+    static DATA_TRACKER = [];
     static TASK_STATUS = { todo: "todo", inprogress: "in-progress", done: "done" };
 
     static STYLE_CLASSES = { title: "tasklist__title", status: "tasklist__status", actionWrap: "tasklist__actions" };
