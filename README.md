@@ -70,7 +70,7 @@ This is roadmap.sh Frontend Projects Ideas and Solutions I have done!
 [ref-temperature-converter]: https://roadmap.sh/projects/temperature-converter
 [demo-temperature-converter]: https://pine1611.github.io/frontend-projects/20-temperature-converter/public
 [ref-pomodoro-timer]: https://roadmap.sh/projects/pomodoro-timer
-[demo-pomodoro-timer]: https://pine1611.github.io/frontend-projects/21-temperature-converter/public/pomodoro.html
+[demo-pomodoro-timer]: https://pine1611.github.io/frontend-projects/21-pomodoro-timer/public/pomodoro.html
 [ref-quiz-app]: https://roadmap.sh/projects/quiz-app
 [demo-quiz-app]: https://pine1611.github.io/frontend-projects/22-quiz-app/public
 [ref-weather-app]: https://roadmap.sh/projects/weather-app
