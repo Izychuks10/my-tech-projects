@@ -369,7 +369,7 @@ class TaskTracker {
         alertMessage: "alertMsg-js",
     };
     static MESSAGE_ALERT = [
-        "Tasks only save in current session work. So, be careful when you want to refresh browser, all tasks will be gone! I will try to create some place for store data file ASAP!",
+        "Because this is only FE-UI, I do not save data in database, tasks only save in current session work. So, be careful when you want to refresh browser, all tasks will be gone!",
         "The purpose of the Pomodoro Technique is to focus on one task at a moment, so I can only allow you to-do one task at a time.",
     ];
 
@@ -470,7 +470,15 @@ class TaskTracker {
                 this.isTaskInprogress = false;
                 break;
             default:
-                this.tasks.splice(indexTask, 1);
+                // const confirmBlock = document.getElementById("confirm-js");
+                // let wrapBlock = confirmBlock.parentElement;
+                // wrapBlock.classList.add("active");
+                this.confirmDeleteTask(indexTask);
+
+                // this.tasks.splice(indexTask, 1);
+                // this.tasks.length == 0 ? (this.isTaskInprogress = false) : (this.isTaskInprogress = true);
+                // this.renderTasks();
+
                 break;
         }
     }
@@ -561,6 +569,40 @@ class TaskTracker {
                 event.target.value = "";
             }
         });
+    }
+    confirmDeleteTask(indexTask) {
+        const confirmBlock = document.getElementById("confirm-js");
+        let wrapBlock = confirmBlock.parentElement;
+        wrapBlock.classList.add("active");
+        confirmBlock.innerHTML = "";
+
+        let yesBtn = document.createElement("button");
+        let textYesBtn = document.createTextNode("Yes");
+        yesBtn.classList.add("btn");
+        yesBtn.appendChild(textYesBtn);
+        yesBtn.addEventListener("click", () => {
+            this.tasks.splice(indexTask, 1);
+            wrapBlock.classList.remove("active");
+            this.tasks.length == 0 ? (this.isTaskInprogress = false) : (this.isTaskInprogress = true);
+            this.renderTasks();
+        });
+
+        let noBtn = document.createElement("button");
+        let textNoBtn = document.createTextNode("No");
+        noBtn.classList.add("btn");
+        noBtn.appendChild(textNoBtn);
+        noBtn.addEventListener("click", () => {
+            wrapBlock.classList.remove("active");
+        });
+
+        let titleConfirm = document.createElement("h3");
+        let textTitle = document.createTextNode("Confirm Delete");
+        titleConfirm.appendChild(textTitle);
+        let confirm = document.createTextNode(`Do you want delete this task: "${this.tasks[indexTask].title}"`);
+        confirmBlock.appendChild(titleConfirm);
+        confirmBlock.appendChild(confirm);
+        confirmBlock.appendChild(yesBtn);
+        confirmBlock.appendChild(noBtn);
     }
 }
 

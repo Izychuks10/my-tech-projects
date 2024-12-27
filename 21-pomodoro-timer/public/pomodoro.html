@@ -30,27 +30,38 @@
 
 <body class="pomodoro">
 
-    <div class="flex flex--x flex--nowrap space-bet al-center pomodoro__top-bar">
-        <div class="pomodoro__nav">
-            <a class="pomodoro__nav-logo" href="index.html"><img class="iap" src="assets/images/iap-white.svg" /></a>
+    <div class="flex flex--x flex--nowrap al-center pomodoro__topbar">
+        <div class="pomodoro__logo">
+            <a href="index.html"><img class="iap" src="assets/images/iap-white.svg" /></a>
         </div>
-        <div class="flex flex--x flex--nowrap al-center gap-2 pomodoro__datetime">
-            <div class="current-date">Dec 24, 2024</div>
-            <div class="current-time">08:00</div>
-        </div>
-    </div>
 
-    <div class="flex flex--y al-center gap-2 pomodoro__nav-sidebar">
-        <a><img class="icon" src="assets/images/light-bulb.svg" /></a>
-        <a class="nav-sidebar__item">🍅</a>
-        <a class="nav-sidebar__item">
-            <img width="20" height="20" src="assets/images/setting.svg" />
-        </a>
+        <div class="flex flex--x flex--nowrap space-bet al-center gap-2 pomodoro__topbar--main">
+            <div class="flex flex--x al-center pomodoro__nav">
+                <a class="pomodoro__nav-item" href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                </a>
+                <a class="pomodoro__nav-item active" href="pomodoro.html">🍅</a>
+                <a class="pomodoro__nav-item" href="guides.html">
+                    <img class="icon" src="assets/images/light-bulb.svg" />
+                </a>
+            </div>
+            <div class="flex flex--x flex--nowrap al-center gap-2 pomodoro__datetime">
+                <a href="#">
+                    <img class="icon" src="assets/images/setting.svg" />
+                </a>
+                <div class="current-date">Dec 24, 2024</div>
+                <div class="current-time">08:00</div>
+            </div>
+        </div>
     </div>
 
     <div class="flex flex--x gap-3 pomodoro__main">
 
-        <div class="basis-md-5 basis-12 pomodoro__box pomodoro__sidebar tasktrack">
+        <div class="basis-md-5 basis-12 pomodoro__box tasktrack">
             <div class="tasktrack__create">
                 <div class="form__wrap">
                     <input class="form__input" type="text" name="tasktitle" id="inputTitle-js"
@@ -61,7 +72,7 @@
 
                 <button class="btn btn--inform" id="btnInsert-js">
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                        stroke-width="1.5" stroke="#f43f3f">
+                        stroke-width="1.5" stroke="#57ab5a">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499" />
                     </svg>
@@ -73,11 +84,11 @@
             </ul>
 
             <div class="tasktrack__alert" id="alertMsg-js">
-
+                <!-- dynamic alert message -->
             </div>
         </div>
 
-        <div class="basis-md-7 basis-12 flex flex--y flex--center pomodoro__box pomodoro__content">
+        <div class="basis-md-7 basis-12 flex flex--y flex--center pomodoro__box">
             <div class="flex flex--x gap-2 nav__focus-time" id="focusTimerContainer-js">
                 <!-- dynamic focus controls timer here -->
             </div>
@@ -89,6 +100,12 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="confirm__wrap">
+        <div class="confirm__box" id="confirm-js">
+            <h3>Confirm Delete</h3>
+        </div>
     </div>
 
     <script src="assets/js/scripts.js"></script>
