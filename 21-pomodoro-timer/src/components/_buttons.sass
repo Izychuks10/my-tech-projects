@@ -28,17 +28,35 @@
         top: 50%
         transform: translateY(-50%)
 
+    @include m("actions")
+        display: flex
+        flex-direction: row
+        flex-wrap: nowrap
+        align-items: center
+        gap: #{$space_4}
+        padding: #{$space_8} #{$space_12}
+        border-radius: #{$space_4}
+        font-size: calculateRem(12px)
+        line-height: 16px
+        background: #{$heavy_dark}
+    @include m("focus-timer")
+        color: #{$heavy_grey}
+        &:hover, &.active
+            color: #57ab5a
+            background: #{$light_dark}
+
     @include m("todo")
-        // color: #57ab5a
+        color: #57ab5a
         background: rgb(70 149 74 / 15%)
         border-color: rgb(70 149 74 / 38%)
 
     @include m("inprogress")
-        // color: #c69026
+        color: #c69026
         background: rgb(198 144 38 / 15%)
         border-color: rgb(198 144 38 / 38%)
 
     @include m("setdone")
+        color: #986ee2
         background: rgb(152 110 226 / 15%)
         border-color: rgb(152 110 226/ 38%)
         cursor: pointer
@@ -47,3 +65,7 @@
         background: rgb(152 110 226 / 15%)
         border-color: rgb(152 110 226/ 38%)
         cursor: help
+    @include m("delete")
+        color: #f43f3f
+        background: rgb(244 63 6 / 15%)
+        border-color: rgb(244 63 6 / 38%)

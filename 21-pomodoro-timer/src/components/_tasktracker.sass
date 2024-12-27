@@ -15,6 +15,13 @@
 
     @include b("tasklist")
         margin-bottom: #{$space_20}
+        max-height: 65vh
+        overflow-y: auto
+        @include for-screen("tablet", "max-w")
+            max-height: none
+            overflow-y: initial
+            padding-bottom: calculateRem(100px)
+
         li
             display: flex
             flex-direction: row
@@ -37,7 +44,10 @@
             gap: #{$space_8}
             max-width: 80%
             @include for-screen("mobile-md", "max-w")
-                max-width: 100%
+                // max-width: 100%
+                // padding-bottom: #{$space_12}
+                // margin-bottom: #{$space_12}
+                // border-bottom: 1px solid var(--border-color)
 
         @include e("status")
             display: block
@@ -58,7 +68,7 @@
             @include m("done", false)
                 color: #986ee2
                 background: rgb(152 110 226 / 15%)
-                border-color: rgb(152 110 226/ 38%)
+                border-color: rgb(152 110 226 / 38%)
 
         @include e("actions")
             display: flex

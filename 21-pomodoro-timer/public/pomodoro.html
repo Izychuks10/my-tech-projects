@@ -78,20 +78,13 @@
         </div>
 
         <div class="basis-md-7 basis-12 flex flex--y flex--center pomodoro__box pomodoro__content">
-            <div class="flex flex--x gap-2 nav__focus-time" id="focusControls-js">
-                <ul class="flex flex--x gap-2">
-                    <li><button class="btn btnTargetTimer-js" target-timer="focusTime">Focus Timer</button></li>
-                    <li><button class="btn btnTargetTimer-js" target-timer="shortBreak">short break</button></li>
-                    <li><button class="btn btnTargetTimer-js" target-timer="longBreak">long break</button></li>
-                </ul>
+            <div class="flex flex--x gap-2 nav__focus-time" id="focusTimerContainer-js">
+                <!-- dynamic focus controls timer here -->
             </div>
             <div class="flex flex--y flex--center">
-                <span class="pomodoro__counter" id="focusTimer-js">25:00</span>
-                <div class="focus__controls">
-                    <button class="btn btnControlTimer-js" target-control="start">Start</button>
-                    <button class="btn btnControlTimer-js" target-control="pause">Pause</button>
-                    <button class="btn btnControlTimer-js" target-control="resume">Resume</button>
-                    <button class="btn btnControlTimer-js" target-control="reset">Reset</button>
+                <span class="pomodoro__counter" id="timerContainer-js">25:00</span>
+                <div class="flex flex--x gap-2" id="actionTimerContainer-js">
+                    <!-- dynamic action controls timer here -->
                 </div>
             </div>
         </div>
