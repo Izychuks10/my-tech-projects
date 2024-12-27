@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+
+    <title>Pomodoro Timer - You've ripped a hole in the fabric of the internet. Love, from Pine!</title>
+
+    <meta name="description"
+        content="A productivity tool based on the Pomodoro Technique. The twenty-one project based on roadmap.sh" />
+    <meta name="keywords"
+        content="design, html, sass/css, responsive, template, javascript, pomodoro timer app, api, productivity tool" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="author" content="Pine!" />
+    <meta property="og:site_name" content="Pomodoro Timer" />
+    <meta property="og:title"
+        content="Pomodoro Timer - You've ripped a hole in the fabric of the internet. Love, from Pine!" />
+    <meta property="og:description"
+        content="A productivity tool based on the Pomodoro Technique. The twenty-one project based on roadmap.sh" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../../global_assets/images/logo.svg" />
+    <meta property="og:url" content="https://github.com/Pine1611" />
+
+    <link rel="icon" type="favicon" href="../../global_assets/images/fav-ico.gif" />
+
+    <link rel="stylesheet" href="assets/css/main.module.min.css" />
+</head>
+
+<body class="pomodoro">
+
+    <div class="flex flex--x flex--nowrap al-center pomodoro__topbar">
+        <div class="pomodoro__logo">
+            <a href="index.html"><img class="iap" src="assets/images/iap-white.svg" /></a>
+        </div>
+
+        <div class="flex flex--x flex--nowrap space-bet al-center gap-2 pomodoro__topbar--main">
+            <div class="flex flex--x al-center pomodoro__nav">
+                <a class="pomodoro__nav-item" href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="icon">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                    </svg>
+                </a>
+                <a class="pomodoro__nav-item active" href="pomodoro.html">🍅</a>
+                <a class="pomodoro__nav-item" href="guides.html">
+                    <img class="icon" src="assets/images/light-bulb.svg" />
+                </a>
+            </div>
+            <div class="flex flex--x flex--nowrap al-center gap-2 pomodoro__datetime">
+                <a href="#">
+                    <img class="icon" src="assets/images/setting.svg" />
+                </a>
+                <div class="current-date" id="currentDatetime-js">Dec 24, 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex--x gap-3 pomodoro__main">
+
+        <div class="basis-md-5 basis-12 pomodoro__box tasktrack">
+            <div class="tasktrack__create">
+                <div class="form__wrap">
+                    <input class="form__input" type="text" name="tasktitle" id="inputTitle-js"
+                        placeholder="What do you need to-do today?" required />
+
+                    <span class="form__error-msg error_msg-js"></span>
+                </div>
+
+                <button class="btn btn--inform" id="btnInsert-js">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke-width="1.5" stroke="#57ab5a">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m7.49 12-3.75 3.75m0 0 3.75 3.75m-3.75-3.75h16.5V4.499" />
+                    </svg>
+                </button>
+            </div>
+
+            <ul class="tasklist" id="tasklist-js">
+                <!-- dynamic load tasks here -->
+            </ul>
+
+            <div class="tasktrack__alert" id="alertMsg-js">
+                <!-- dynamic alert message -->
+            </div>
+        </div>
+
+        <div class="basis-md-7 basis-12 flex flex--y flex--center pomodoro__box">
+            <div class="flex flex--x gap-2 nav__focus-time" id="focusTimerContainer-js">
+                <!-- dynamic focus controls timer here -->
+            </div>
+            <div class="flex flex--y flex--center">
+                <span class="pomodoro__counter" id="timerContainer-js">25:00</span>
+                <div class="flex flex--x gap-2" id="actionTimerContainer-js">
+                    <!-- dynamic action controls timer here -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="confirm__wrap">
+        <div class="confirm__box" id="confirm-js">
+            <h3>Confirm Delete</h3>
+        </div>
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+
+</body>
+
+</html>

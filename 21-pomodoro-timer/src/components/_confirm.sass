@@ -1,0 +1,24 @@
+@include b("confirm")
+
+    @include e("wrap")
+        position: fixed
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        width: 100vw
+        height: 100vh
+        background: rgba(15, 15, 15, .95)
+        display: none
+        align-items: center
+        justify-content: center
+        transition: 180ms all ease-in-out
+        &.active
+            display: flex
+
+    @include e("box")
+        background: #{$mid_dark}
+        border-radius: #{$space_20}
+        padding: #{$space_20}
+        border: 1px solid #{$light_dark}
+        width: 90%
