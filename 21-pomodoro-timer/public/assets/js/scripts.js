@@ -472,6 +472,7 @@ class TaskTracker {
         if (status == this.status.todo) {
             let todoBtn = this.createBtnControls({ id: id, status: this.status.todo });
             actionsWrapEle.appendChild(todoBtn);
+            actionsWrapEle.appendChild(deleteBtn);
         }
         if (status == this.status.inprogress) {
             let pauseBtn = this.createBtnControls({ id: id, status: this.status.inprogress });
@@ -479,8 +480,9 @@ class TaskTracker {
             actionsWrapEle.appendChild(checkDoneBtn);
             actionsWrapEle.appendChild(pauseBtn);
         }
-
-        actionsWrapEle.appendChild(deleteBtn);
+        if (status == this.status.done) {
+            actionsWrapEle.appendChild(deleteBtn);
+        }
 
         return actionsWrapEle;
     }
