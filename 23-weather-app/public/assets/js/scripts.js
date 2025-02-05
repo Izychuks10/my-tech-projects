@@ -56,22 +56,22 @@ class WeatherApp {
             if (target == this.targetData.data.daynight) {
                 item.innerHTML = "";
                 let imgIcon = document.createElement("img");
-                imgIcon.src = "assets/images/" + `${this.dataWeather.daynight == 0 ? "day.svg" : "night.svg"}`;
+                imgIcon.src = "assets/images/" + `${this.dataWeather.daynight == 0 ? "night.svg" : "day.svg"}`;
                 item.appendChild(imgIcon);
             } else if (target == this.targetData.data.datetime) {
                 let date = new Date(this.dataWeather.datetime);
 
                 // option format date time
                 const optionDateformat = {
-                    weekday: "long",
+                    weekday: "short",
                     year: "numeric",
-                    month: "long",
-                    day: "numeric",
+                    month: "short",
+                    day: "2-digit",
                 };
-                const dateFormat = new Intl.DateTimeFormat("en-US", optionDateformat);
+                const dateFormat = new Intl.DateTimeFormat("vn-VN", optionDateformat);
 
                 item.innerHTML = "";
-                item.innerHTML = dateFormat.format(date);
+                item.innerHTML = `${dateFormat.format(date)} ${date.getHours >= 12 ? "PM" : "AM"}`;
             } else {
                 // fill data to element
                 item.innerHTML = this.dataWeather[target];
