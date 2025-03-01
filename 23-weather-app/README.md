@@ -15,7 +15,7 @@ This project is open-source and available under the [MIT License](https://openso
 
 ## Author
 
-I am Pine
+I am Izychuks
 
 ---
 
