@@ -8,32 +8,54 @@
     --height-thumb: #{calculateRem(120px)}
     --width-thumb-active: #{calculateRem(240px)}
     --height-thumb-active: #{calculateRem(360px)}
+    --border-color-thumb-active: #{$primary_200}
+    --box-shadow-thumb: 0 0 24px 0 rgba(157, 23, 23, .18)
+    // --box-shadow-thumb: 0 0 24px 0 rgba(0, 0, 0, .08)
+    --slide-transition: 230ms all ease-in-out
 
     --fz-title: #{calculateRem(24px)}
     --lh-title: #{calculateRem(32px)}
     --text-color-title: #{$primary_400}
 
     position: relative
-    width: var(--width-container)
+    // width: var(--width-container)
 
     @include e("item")
         display: block
+        cursor: pointer
+        overflow: hidden
+        transition: var(--slide-transition)
+        &:hover
+            box-shadow: var(--box-shadow-thumb)
         @include m("thumb")
             width: var(--width-thumb)
             height: var(--height-thumb)
         @include m("active")
             width: var(--width-thumb-active)
             height: var(--height-thumb-active)
+            cursor: alias
+            z-index: 10
+            border: 1px solid var(--border-color-thumb-active)
+            @include for-screen("mobile-md", "max-w")
+                width: var(--width-thumb)
+                height: var(--height-thumb)
+
         > img
             display: block
             width: 100%
+            height: 100%
             object-fit: cover
+            transition: var(--slide-transition)
+            animation: slide_left 430ms cubic-bezier(0, 0, 0.35, 1)
 
     @include e("content-wrap")
         position: absolute
         top: 0
         left: 0
         width: 100%
+        @include for-screen("mobile-md", "max-w")
+            position: relative
+            flex-wrap: wrap
 
     @include e("title")
         position: absolute
@@ -43,6 +65,9 @@
         font-size: var(--fz-title)
         line-height: var(--lh-title)
         color: var(--text-color-title)
+        @include for-screen("mobile-md", "max-w")
+            position: relative
+            transform: rotateZ(0) translateX(0)
 
     @include e("content")
         color: #{$heavy_grey}

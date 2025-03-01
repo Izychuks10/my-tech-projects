@@ -1,0 +1,40 @@
+{
+    "slides": [
+        {
+            "id": 1,
+            "title": "Slide 1",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officiis nesciunt deserunt necessitatibus aspernatur illum!",
+            "src": "slide-1"
+        },
+        {
+            "id": 2,
+            "title": "Slide 1",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officiis nesciunt deserunt necessitatibus aspernatur illum!",
+            "src": "slide-2"
+        },
+        {
+            "id": 3,
+            "title": "Slide 1",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officiis nesciunt deserunt necessitatibus aspernatur illum!",
+            "src": "slide-3"
+        },
+        {
+            "id": 4,
+            "title": "Slide 1",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officiis nesciunt deserunt necessitatibus aspernatur illum!",
+            "src": "slide-4"
+        },
+        {
+            "id": 5,
+            "title": "Slide 1",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officiis nesciunt deserunt necessitatibus aspernatur illum!",
+            "src": "slide-5"
+        },
+        {
+            "id": 6,
+            "title": "Slide 6",
+            "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum officiis nesciunt deserunt necessitatibus aspernatur illum!",
+            "src": "slide-6"
+        }
+    ]
+}
