@@ -23,4 +23,4 @@ Happy Coding!
 
 [roadmap-frontend-projects]: https://roadmap.sh/frontend/projects
 [weather-app]: https://roadmap.sh/projects/weather-app
-[demo-link]: https://izychuks10.github.io/frontend-projects/23-weather-app/public
+[demo-link]: https://pine1611.github.io/frontend-projects/23-weather-app/public
